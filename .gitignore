@@ -1,4 +1,6 @@
-# Compiled class file
+# === JAVA / NETBEANS PROJECT ===
+
+# Bytecode class
 *.class
 
 # Log file
@@ -7,10 +9,30 @@
 # BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# J2ME temp
 .mtj.tmp/
 
-# Package Files #
+# Build files
+/Aroma_Magang/build/
+/Aroma_Magang/dist/
+/Aroma_Magang/nbbuild/
+/Aroma_Magang/nbdist/
+/Aroma_Magang/nbactions.xml
+/Aroma_Magang/nbproject/private/
+/Aroma_Magang/manifest.mf
+
+# OS generated files
+.DS_Store        # macOS
+Thumbs.db        # Windows
+ehthumbs.db      # Windows
+
+# IDE metadata (optional but recommended)
+/*.iml
+.idea/
+*.ipr
+*.iws
+
+# Compiled packages
 *.jar
 *.war
 *.nar
@@ -19,6 +41,17 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Virtual Machine crash logs
 hs_err_pid*
 replay_pid*
+
+# Environment-specific
+.vscode/
+.env
+*.db
+
+# Backup files
+*.bak
+*.swp
+*.swo
+*~
