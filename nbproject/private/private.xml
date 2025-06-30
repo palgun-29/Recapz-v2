@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/PALGUNADI/Pemrograman%201/RECAPZ/src/Login/MenuUtama.java</file>
-            <file>file:/C:/PALGUNADI/Pemrograman%201/RECAPZ/src/Anggota/PanelAnggota.java</file>
-            <file>file:/C:/PALGUNADI/Pemrograman%201/RECAPZ/src/Login/PanelLogin.java</file>
-            <file>file:/C:/PALGUNADI/Pemrograman%201/RECAPZ/src/Login/Registrasi.java</file>
+            <file>file:/C:/PALGUNADI/Pemrograman%201/Recapz-v2/src/DashboardMenuUtama/PanelLogin.java</file>
+            <file>file:/C:/PALGUNADI/Pemrograman%201/Recapz-v2/src/Peminjam/PanelPeminjam.java</file>
+            <file>file:/C:/PALGUNADI/Pemrograman%201/Recapz-v2/src/Buku/PanelBuku.java</file>
+            <file>file:/C:/PALGUNADI/Pemrograman%201/Recapz-v2/src/Anggota/PanelAnggota.java</file>
+            <file>file:/C:/PALGUNADI/Pemrograman%201/Recapz-v2/src/DashboardMenuUtama/MenuUtama.java</file>
+            <file>file:/C:/PALGUNADI/Pemrograman%201/Recapz-v2/src/DashboardMenuUtama/Registrasi.java</file>
         </group>
     </open-files>
 </project-private>

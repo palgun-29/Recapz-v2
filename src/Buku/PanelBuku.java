@@ -6,7 +6,7 @@
 
 package Buku;
 
-import Login.DatabaseConnection;
+import DashboardMenuUtama.DatabaseConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -156,16 +156,7 @@ public class PanelBuku extends javax.swing.JPanel {
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(this, "Error menambahkan data buku: " + e.getMessage(), "Error Database", JOptionPane.ERROR_MESSAGE);
         e.printStackTrace();
-    } finally {
-        try {
-            if (rs != null) rs.close();
-            if (stmt != null) stmt.close();
-            if (conn != null) conn.close();
-        } catch (SQLException ex) {
-            System.err.println("Error closing resources: " + ex.getMessage());
-            ex.printStackTrace();
-        }
-    }
+    } 
 }
     private void editDataBuku() {
         String judulBuku = jTextField1.getText().trim();
@@ -213,39 +204,108 @@ public class PanelBuku extends javax.swing.JPanel {
         } 
     }
 
-    private void hapusDataBuku() {
-        String judul = jTextField1.getText().trim();
+  private void hapusDataBuku() {
+    int selectedRow = jTable1.getSelectedRow();
+    String judulBukuToDelete = null;
+    int idBukuToDelete = -1;
 
-        if(judul.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Pilih data buku yang akan dihapus dari tabel atau masukkan Judul Buku.", "Peringatan", JOptionPane.WARNING_MESSAGE);
+    if (selectedRow != -1) {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        idBukuToDelete = (int) model.getValueAt(selectedRow, 0); // Assuming ID is in column 0
+        judulBukuToDelete = (String) model.getValueAt(selectedRow, 1); // Assuming Title is in column 1
+    } else {
+        judulBukuToDelete = jTextField1.getText().trim();
+        if (judulBukuToDelete.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Pilih data buku dari tabel atau masukkan Judul Buku yang ingin dihapus.", "Peringatan", JOptionPane.WARNING_MESSAGE);
             return;
         }
+    }
 
-        int konfirmasi = JOptionPane.showConfirmDialog(this, "Anda yakin ingin menghapus data buku dengan Judul: " + judul + "?", "Konfirmasi Hapus", JOptionPane.YES_NO_OPTION);
+    int konfirmasi = JOptionPane.showConfirmDialog(this,
+            "Anda yakin ingin menghapus data buku: '" + judulBukuToDelete + "'?\n" +
+            "PERINGATAN: Semua riwayat peminjaman buku ini juga akan dihapus secara permanen!",
+            "Konfirmasi Hapus Permanen",
+            JOptionPane.YES_NO_OPTION);
 
-        if (konfirmasi == JOptionPane.YES_OPTION) {
-            
-            try (Connection conn = DatabaseConnection.connect()){
+    if (konfirmasi == JOptionPane.YES_OPTION) {
+        try (Connection conn = DatabaseConnection.connect()) {
+            if (conn == null) {
+                JOptionPane.showMessageDialog(this, "Koneksi database gagal.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
-                String sql = "DELETE FROM buku WHERE judul = ?";
-                PreparedStatement stmt = conn.prepareStatement(sql);
-                stmt.setString(1, judul);
+            // Dapatkan idBukuToDelete jika belum ada (dari jTextField1)
+            if (idBukuToDelete == -1) {
+                String getIdQuery = "SELECT id_buku FROM buku WHERE judul = ?";
+                try (PreparedStatement getIdStmt = conn.prepareStatement(getIdQuery)) {
+                    getIdStmt.setString(1, judulBukuToDelete);
+                    try (ResultSet rs = getIdStmt.executeQuery()) {
+                        if (rs.next()) {
+                            idBukuToDelete = rs.getInt("id_buku");
+                        } else {
+                            JOptionPane.showMessageDialog(this, "Judul buku '" + judulBukuToDelete + "' tidak ditemukan.", "Error", JOptionPane.ERROR_MESSAGE);
+                            return;
+                        }
+                    }
+                }
+            }
 
-                int rowsAffected = stmt.executeUpdate();
-                if (rowsAffected > 0) {
-                    JOptionPane.showMessageDialog(this, "Data buku berhasil dihapus!", "Sukses", JOptionPane.INFORMATION_MESSAGE);
-                    clearForm();
-                    loadDataBuku();
-                } else {
-                    JOptionPane.showMessageDialog(this, "Gagal menghapus data buku. Judul buku tidak ditemukan.", "Error", JOptionPane.ERROR_MESSAGE);
+            // Dimulai dengan transaksi untuk memastikan atomicity
+            conn.setAutoCommit(false); // Mulai transaksi
+
+            try {
+                // 1. Cek apakah buku sedang aktif dipinjam (Ini masih relevan untuk LOGIKA APLIKASI Anda)
+                String checkPeminjamAktifSql = "SELECT COUNT(*) FROM peminjam WHERE id_buku = ? AND status = 'Dipinjam'";
+                try (PreparedStatement checkStmt = conn.prepareStatement(checkPeminjamAktifSql)) {
+                    checkStmt.setInt(1, idBukuToDelete);
+                    try (ResultSet rsCheck = checkStmt.executeQuery()) {
+                        if (rsCheck.next() && rsCheck.getInt(1) > 0) {
+                            JOptionPane.showMessageDialog(this, "Buku tidak bisa dihapus karena masih ada transaksi peminjaman yang aktif.", "Error", JOptionPane.ERROR_MESSAGE);
+                            conn.rollback(); // Batalkan transaksi
+                            return;
+                        }
+                    }
                 }
 
+                // 2. Hapus semua riwayat peminjaman terkait buku ini dari tabel 'peminjam'
+                String deletePeminjamSql = "DELETE FROM peminjam WHERE id_buku = ?";
+                try (PreparedStatement deletePeminjamStmt = conn.prepareStatement(deletePeminjamSql)) {
+                    deletePeminjamStmt.setInt(1, idBukuToDelete);
+                    deletePeminjamStmt.executeUpdate(); // Eksekusi penghapusan di tabel child
+                }
+
+                // 3. Sekarang, hapus buku dari tabel 'buku' (parent)
+                String deleteBukuSql = "DELETE FROM buku WHERE id_buku = ?";
+                try (PreparedStatement deleteBukuStmt = conn.prepareStatement(deleteBukuSql)) {
+                    deleteBukuStmt.setInt(1, idBukuToDelete);
+                    int rowsAffected = deleteBukuStmt.executeUpdate();
+
+                    if (rowsAffected > 0) {
+                        conn.commit(); // Konfirmasi transaksi jika semua berhasil
+                        JOptionPane.showMessageDialog(this, "Data buku dan riwayat peminjaman terkait berhasil dihapus permanen!", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+                        clearForm();
+                        loadDataBuku();
+                    } else {
+                        conn.rollback(); // Batalkan jika penghapusan buku gagal
+                        JOptionPane.showMessageDialog(this, "Gagal menghapus data buku atau buku tidak ditemukan.", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
             } catch (SQLException e) {
-                JOptionPane.showMessageDialog(this, "Error menghapus data buku: " + e.getMessage(), "Error Database", JOptionPane.ERROR_MESSAGE);
-                e.printStackTrace();
+                conn.rollback(); // Batalkan transaksi jika terjadi error
+                throw e; // Lanjutkan melempar exception ke catch block luar
+            } finally {
+                conn.setAutoCommit(true); // Kembalikan auto-commit ke true
             }
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Error menghapus data buku: " + e.getMessage(), "Error Database", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
         }
     }
+}
+
+
+
 
 
     @SuppressWarnings("unchecked")
@@ -268,7 +328,6 @@ public class PanelBuku extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -355,18 +414,12 @@ public class PanelBuku extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IconGambar/arrow_back_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png"))); // NOI18N
-        jLabel7.setText("Kembali");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel7)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -407,13 +460,12 @@ public class PanelBuku extends javax.swing.JPanel {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(333, 333, 333)))
-                        .addContainerGap(57, Short.MAX_VALUE))))
+                        .addContainerGap(40, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel7)
-                .addGap(19, 19, 19)
+                .addGap(39, 39, 39)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -475,7 +527,6 @@ public class PanelBuku extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
