@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package Anggota;
 
 import DashboardMenuUtama.DatabaseConnection;
@@ -11,8 +5,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -29,7 +21,7 @@ public class PanelAnggota extends javax.swing.JPanel {
      */
     public PanelAnggota() {
         initComponents();
-        tambahDataAnggota();
+ 
     }
     
     private void clearForm() {
@@ -121,8 +113,6 @@ public class PanelAnggota extends javax.swing.JPanel {
     }
     
     private void editDataAnggota() {
-        // Ganti jTextField1, jTextField2, dll. dengan nama variabel komponen GUI Anda
-        
         String nama = jTextField1.getText().trim();
         String noHandphone = jTextField2.getText().trim();
         String email = jTextField3.getText().trim();
@@ -174,9 +164,6 @@ public class PanelAnggota extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this, "Pilih anggota yang akan dihapus dari tabel.", "Peringatan", JOptionPane.WARNING_MESSAGE);
         return;
     }
-
-    // Ambil ID Anggota dan Nama Anggota dari tabel
-    // PERBAIKAN DI SINI: Gunakan Integer.parseInt() untuk mengkonversi String ke int
     try {
         String idAnggotaStr = jTable1.getModel().getValueAt(selectedRow, 0).toString(); // Ambil sebagai String
         int idAnggota = Integer.parseInt(idAnggotaStr); // Konversi ke int

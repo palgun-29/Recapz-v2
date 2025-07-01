@@ -1,24 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package Peminjam;
 
 import DashboardMenuUtama.DatabaseConnection;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -26,166 +16,201 @@ import javax.swing.table.DefaultTableModel;
  * @author SITI NURLENY
  */
 public class PanelPeminjam extends javax.swing.JPanel {
-    private DefaultTableModel tableModel;
     
     public PanelPeminjam() {
         initComponents();
-        loadComboBoxData();
+        loadAnggota();
+        loadBuku();
+        loadTable();
+        clearForm();
     }
     
-    private void loadComboBoxData() {
+    private void loadAnggota() {
     jComboBox2.removeAllItems();
-    jComboBox3.removeAllItems();       
-
-    try (Connection conn = DatabaseConnection.connect()) {
-        // Load anggota
-        Statement stmtAnggota = conn.createStatement();
-        ResultSet rsAnggota = stmtAnggota.executeQuery("SELECT id_anggota, nama FROM anggota");
-        while (rsAnggota.next()) {
-            int id = rsAnggota.getInt("id_anggota");
-            String nama = rsAnggota.getString("nama");
-            jComboBox2.addItem(nama);
+    try (Connection conn = DatabaseConnection.connect();
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery("SELECT nama FROM anggota")) {
+        while (rs.next()) {
+            jComboBox2.addItem(rs.getString("nama"));
         }
-
-        // Load buku
-        Statement stmtBuku = conn.createStatement();
-        ResultSet rsBuku = stmtBuku.executeQuery("SELECT id_buku, judul FROM buku WHERE stok > 0");
-        while (rsBuku.next()) {
-            int id = rsBuku.getInt("id_buku");
-            String judul = rsBuku.getString("judul");
-            jComboBox3.addItem(judul);
-        }
-
     } catch (SQLException e) {
-        JOptionPane.showMessageDialog(this, "Gagal load ComboBox: " + e.getMessage());
+        JOptionPane.showMessageDialog(this, "Gagal load anggota: " + e.getMessage());
     }
 }
 
-   private void pinjamBuku() {
-    try (Connection conn = DatabaseConnection.connect()) {
-        String sql = "INSERT INTO peminjam (id_anggota, id_buku, tangga_pinjam, tangga_kembali, status) VALUES (?, ?, ?, ?, ?)";
-        PreparedStatement ps = conn.prepareStatement(sql);
-        ps.setInt(1, getSelectedId(jComboBox2)); // jComboBox2 untuk Anggota
-        ps.setInt(2, getSelectedId(jComboBox3)); // jComboBox3 untuk Buku
-        ps.setDate(3, Date.valueOf(jTextField1.getText().trim())); // jTextField1 untuk Tanggal Pinjam
-        ps.setDate(4, Date.valueOf(jTextField2.getText().trim())); // jTextField2 untuk Tanggal Kembali
-        ps.setString(5, jComboBox1.getSelectedItem().toString()); // jComboBox1 untuk Status (seperti "Dipinjam")
-        ps.executeUpdate();
-
-        // Kurangi stok buku
-        PreparedStatement psUpdateStok = conn.prepareStatement("UPDATE buku SET stok = stok - 1 WHERE id_buku = ?");
-        psUpdateStok.setInt(1, getSelectedId(jComboBox3));
-        psUpdateStok.executeUpdate();
-
-        JOptionPane.showMessageDialog(this, "Data peminjaman berhasil disimpan.");        
-        // Opsional: Bersihkan inputan setelah berhasil
-        jTextField1.setText(""); // Bersihkan tanggal pinjam
-        jTextField2.setText(""); // Bersihkan tanggal kembali
-        jComboBox1.setSelectedIndex(-1);
-        jComboBox2.setSelectedIndex(-1);
-        jComboBox3.setSelectedIndex(-1);
-
+private void loadBuku() {
+    jComboBox3.removeAllItems();
+    try (Connection conn = DatabaseConnection.connect();
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery("SELECT judul FROM buku")) {
+        while (rs.next()) {
+            jComboBox3.addItem(rs.getString("judul"));
+        }
     } catch (SQLException e) {
-        JOptionPane.showMessageDialog(this, "Gagal menyimpan: " + e.getMessage());
-    } catch (IllegalArgumentException e) {
-        JOptionPane.showMessageDialog(this, "Format tanggal salah. Gunakan format YYYY-MM-DD.");
+        JOptionPane.showMessageDialog(this, "Gagal load buku: " + e.getMessage());
     }
 }
-   private void loadTable() {
-    DefaultTableModel model = (DefaultTableModel) jTable1.getModel(); // Asumsikan jTable1 adalah nama JTable Anda
-    model.setRowCount(0); // Bersihkan semua baris yang ada di tabel
 
-    String sql = "SELECT p.id_peminjam, a.nama, b.judul, p.tangga_pinjam, p.tangga_kembali, p.status " +
-                 "FROM peminjam p " +
-                 "JOIN anggota a ON p.id_anggota = a.id_anggota " +
-                 "JOIN buku b ON p.id_buku = b.id_buku";
+private void loadTable() {
+    DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Nama Anggota");
+    model.addColumn("Judul Buku");
+    model.addColumn("Tanggal Pinjam");
+    model.addColumn("Tanggal Kembali");
+    model.addColumn("Status");
 
     try (Connection conn = DatabaseConnection.connect();
-         PreparedStatement ps = conn.prepareStatement(sql);
-         ResultSet rs = ps.executeQuery()) {
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(
+             "SELECT a.nama, b.judul, p.tangga_pinjam, p.tangga_kembali, p.status " +
+             "FROM peminjam p " +
+             "JOIN anggota a ON p.id_anggota = a.id_anggota " +
+             "JOIN buku b ON p.id_buku = b.id_buku")) {
 
         while (rs.next()) {
-            // Ambil data dari ResultSet
-            // int idPeminjam = rs.getInt("id_peminjam"); // Jika Anda ingin menampilkan ID peminjam
-            String namaAnggota = rs.getString("nama");
-            String judulBuku = rs.getString("judul");
-            Date tanggalPinjam = rs.getDate("tangga_pinjam");
-            Date tanggalKembali = rs.getDate("tangga_kembali");
-            String status = rs.getString("status");
-
-            // Tambahkan data ke model tabel
-            model.addRow(new Object[]{namaAnggota, judulBuku, tanggalPinjam, tanggalKembali, status});
+            model.addRow(new Object[] {
+                rs.getString("nama"),
+                rs.getString("judul"),
+                rs.getString("tangga_pinjam"),
+                rs.getString("tangga_kembali"),
+                rs.getString("status")
+            });
         }
+
+        jTable1.setModel(model);
+
     } catch (SQLException e) {
-        JOptionPane.showMessageDialog(this, "Error memuat data tabel: " + e.getMessage());
+        JOptionPane.showMessageDialog(this, "Gagal memuat data: " + e.getMessage());
     }
 }
 
-    private void kembalikanBuku() {
-    int selectedRow = jTable1.getSelectedRow(); // Ambil baris yang dipilih di JTable
 
-    if (selectedRow == -1) {
-        JOptionPane.showMessageDialog(this, "Pilih baris peminjaman yang akan dikembalikan terlebih dahulu.");
-        return;
-    }
-
-    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-    String namaAnggotaTabel = (String) model.getValueAt(selectedRow, 0); // Kolom Nama Anggota
-    String judulBukuTabel = (String) model.getValueAt(selectedRow, 1);    // Kolom Judul Buku
-    java.sql.Date tanggalPinjamTabel = (java.sql.Date) model.getValueAt(selectedRow, 2); // Kolom Tanggal Pinjam
-    
-    int idPeminjam = -1;
-    int idBuku = -1; // Untuk mengembalikan stok
-
+private void pinjamBuku() {
     try (Connection conn = DatabaseConnection.connect()) {
-        // 1. Dapatkan id_peminjam dan id_buku berdasarkan data yang dipilih di tabel
-        String getIdsSql = "SELECT p.id_peminjam, p.id_buku FROM peminjam p " +
-                           "JOIN anggota a ON p.id_anggota = a.id_anggota " +
-                           "JOIN buku b ON p.id_buku = b.id_buku " +
-                           "WHERE a.nama = ? AND b.judul = ? AND p.tangga_pinjam = ? AND p.status = 'Dipinjam'"; // Hanya yang masih dipinjam
-        
-        PreparedStatement psGetIds = conn.prepareStatement(getIdsSql);
-        psGetIds.setString(1, namaAnggotaTabel);
-        psGetIds.setString(2, judulBukuTabel);
-        psGetIds.setDate(3, tanggalPinjamTabel);
-        
-        ResultSet rs = psGetIds.executeQuery();
-        if (rs.next()) {
-            idPeminjam = rs.getInt("id_peminjam");
-            idBuku = rs.getInt("id_buku");
-        } else {
-            JOptionPane.showMessageDialog(this, "Data peminjaman tidak ditemukan atau sudah dikembalikan.");
+        String namaAnggota = jComboBox2.getSelectedItem().toString();  // Nama Anggota
+        String judulBuku = jComboBox3.getSelectedItem().toString();    // Judul Buku
+        String tanggalPinjam = jTextField1.getText().trim();           // Tanggal Pinjam
+        String tanggalKembali = jTextField2.getText().trim();          // Tanggal Kembali
+        String status = jComboBox1.getSelectedItem().toString();       // Status
+
+        // Validasi form
+        if (tanggalPinjam.isEmpty() || tanggalKembali.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Tanggal pinjam dan kembali harus diisi!");
             return;
         }
 
-        // 2. Ubah status peminjaman menjadi "Dikembalikan"
-        String updatePeminjamanSql = "UPDATE peminjam SET status = 'Dikembalikan' WHERE id_peminjam = ?";
-        PreparedStatement psUpdatePeminjaman = conn.prepareStatement(updatePeminjamanSql);
-        psUpdatePeminjaman.setInt(1, idPeminjam);
-        psUpdatePeminjaman.executeUpdate();
+        // Ambil id_anggota dari nama
+        int idAnggota = -1;
+        PreparedStatement stmt1 = conn.prepareStatement("SELECT id_anggota FROM anggota WHERE nama = ?");
+        stmt1.setString(1, namaAnggota);
+        ResultSet rs1 = stmt1.executeQuery();
+        if (rs1.next()) {
+            idAnggota = rs1.getInt("id_anggota");
+        } else {
+            JOptionPane.showMessageDialog(this, "Anggota tidak ditemukan!");
+            return;
+        }
 
-        // 3. Tambahkan kembali stok buku
-        String updateStokSql = "UPDATE buku SET stok = stok + 1 WHERE id_buku = ?";
-        PreparedStatement psUpdateStok = conn.prepareStatement(updateStokSql);
-        psUpdateStok.setInt(1, idBuku);
-        psUpdateStok.executeUpdate();
+        // Ambil id_buku dari judul
+        int idBuku = -1;
+        PreparedStatement stmt2 = conn.prepareStatement("SELECT id_buku FROM buku WHERE judul = ?");
+        stmt2.setString(1, judulBuku);
+        ResultSet rs2 = stmt2.executeQuery();
+        if (rs2.next()) {
+            idBuku = rs2.getInt("id_buku");
+        } else {
+            JOptionPane.showMessageDialog(this, "Buku tidak ditemukan!");
+            return;
+        }
 
-        JOptionPane.showMessageDialog(this, "Buku berhasil dikembalikan dan stok diperbarui.");
-        
-        // 4. Perbarui tabel GUI agar menampilkan perubahan
-        loadTable(); // Memuat ulang semua data dari database
-        
+        // Simpan ke peminjam
+        String sql = "INSERT INTO peminjam (id_anggota, id_buku, tangga_pinjam, tangga_kembali, status) VALUES (?, ?, ?, ?, ?)";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setInt(1, idAnggota);
+        ps.setInt(2, idBuku);
+        ps.setString(3, tanggalPinjam);
+        ps.setString(4, tanggalKembali);
+        ps.setString(5, status);
+        ps.executeUpdate();
+
+        // Kurangi stok
+        PreparedStatement psUpdate = conn.prepareStatement("UPDATE buku SET stok = stok - 1 WHERE id_buku = ?");
+        psUpdate.setInt(1, idBuku);
+        psUpdate.executeUpdate();
+
+        JOptionPane.showMessageDialog(this, "Data peminjaman berhasil disimpan!");
+        clearForm();
+
     } catch (SQLException e) {
-        JOptionPane.showMessageDialog(this, "Gagal mengembalikan buku: " + e.getMessage());
-        e.printStackTrace(); // Cetak stack trace untuk debugging
+        JOptionPane.showMessageDialog(this, "Gagal menyimpan: " + e.getMessage());
+    } catch (NullPointerException e) {
+        JOptionPane.showMessageDialog(this, "Pastikan semua data dipilih!");
     }
 }
 
-    private int getSelectedId(JComboBox<String> comboBox) {
-        String item = (String) comboBox.getSelectedItem();
-        return Integer.parseInt(item.split(" - ")[0]);
+private void kembalikanBuku() {
+    int selectedRow = jTable1.getSelectedRow();
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(this, "Pilih salah satu baris untuk dikembalikan!");
+        return;
     }
-    
+
+    String namaAnggota = jTable1.getValueAt(selectedRow, 0).toString();
+    String judulBuku = jTable1.getValueAt(selectedRow, 1).toString();
+
+    try (Connection conn = DatabaseConnection.connect()) {
+        // Ambil id anggota
+        int idAnggota = -1;
+        PreparedStatement stmt1 = conn.prepareStatement("SELECT id_anggota FROM anggota WHERE nama = ?");
+        stmt1.setString(1, namaAnggota);
+        ResultSet rs1 = stmt1.executeQuery();
+        if (rs1.next()) {
+            idAnggota = rs1.getInt("id_anggota");
+        }
+
+        // Ambil id buku
+        int idBuku = -1;
+        PreparedStatement stmt2 = conn.prepareStatement("SELECT id_buku FROM buku WHERE judul = ?");
+        stmt2.setString(1, judulBuku);
+        ResultSet rs2 = stmt2.executeQuery();
+        if (rs2.next()) {
+            idBuku = rs2.getInt("id_buku");
+        }
+
+        if (idAnggota != -1 && idBuku != -1) {
+            // Update status peminjaman jadi "Dikembalikan"
+            PreparedStatement updateStatus = conn.prepareStatement(
+                "UPDATE peminjam SET status = 'Dikembalikan' WHERE id_anggota = ? AND id_buku = ? AND status = 'Dipinjam'");
+            updateStatus.setInt(1, idAnggota);
+            updateStatus.setInt(2, idBuku);
+            int rows = updateStatus.executeUpdate();
+
+            if (rows > 0) {
+                // Tambah stok buku
+                PreparedStatement tambahStok = conn.prepareStatement(
+                    "UPDATE buku SET stok = stok + 1 WHERE id_buku = ?");
+                tambahStok.setInt(1, idBuku);
+                tambahStok.executeUpdate();
+
+                JOptionPane.showMessageDialog(this, "Buku berhasil dikembalikan!");
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Gagal mengubah status. Mungkin buku sudah dikembalikan.");
+            }
+        }
+
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "Gagal mengembalikan buku: " + e.getMessage());
+    }
+}
+
+private void clearForm() {
+    jComboBox1.setSelectedIndex(0); // Status
+    jComboBox2.setSelectedIndex(0); // Nama anggota
+    jComboBox3.setSelectedIndex(0); // Judul buku
+    jTextField1.setText("");        // Tanggal pinjam
+    jTextField2.setText("");        // Tanggal kembali
+}
 
     
     @SuppressWarnings("unchecked")
@@ -272,8 +297,6 @@ public class PanelPeminjam extends javax.swing.JPanel {
             }
         });
 
-        jComboBox3.setSelectedIndex(-1);
-
         jButton3.setBackground(new java.awt.Color(0, 100, 100));
         jButton3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
@@ -307,28 +330,35 @@ public class PanelPeminjam extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField1)
                             .addComponent(jTextField2)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(35, 35, 35))
             .addGroup(layout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(104, 104, 104)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(117, 117, 117)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(281, 281, 281)
+                        .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(34, 34, 34)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
