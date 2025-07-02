@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="22.7" version="22.7" Modules="enterprise" RootPath="." Language="id" Id="{11B3EA5C-7C88-4966-975C-137995B608C4}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="Basis data penginstal ini berisi logika dan data yang dibutuhkan untuk menginstal  [|ProductName]." ValueLocId="*"/>
+    <ROW Property="CurrentJavaProductName" Value="CurrentJavaProductName"/>
+    <ROW Property="Manufacturer" Value="Tim RECAPZ"/>
+    <ROW Property="ProductCode" Value="1057:{6496D46F-9EFD-461A-8755-EFF308820F1E} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="RECAPZ Perpustakaan"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Options="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{5221E2C0-7965-4813-840E-CBA91BF26AB8}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60" MultiBuildValue="DefaultBuild:Windows Vista/Server 2008" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT60Display" MultiBuildValue="DefaultBuild:Windows Vista/Server 2008" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1" DirectoryOptions="3"/>
+    <ROW Directory="Anggota_1_Dir" Directory_Parent="src_Dir" DefaultDir="Anggota" DirectoryOptions="3"/>
+    <ROW Directory="Anggota_Dir" Directory_Parent="classes_Dir" DefaultDir="Anggota" DirectoryOptions="3"/>
+    <ROW Directory="Buku_1_Dir" Directory_Parent="src_Dir" DefaultDir="Buku" DirectoryOptions="3"/>
+    <ROW Directory="Buku_Dir" Directory_Parent="classes_Dir" DefaultDir="Buku" DirectoryOptions="3"/>
+    <ROW Directory="DashboardMenuUtama_1_Dir" Directory_Parent="src_Dir" DefaultDir="DASHBO~1|DashboardMenuUtama" DirectoryOptions="3"/>
+    <ROW Directory="DashboardMenuUtama_Dir" Directory_Parent="classes_Dir" DefaultDir="DASHBO~1|DashboardMenuUtama" DirectoryOptions="3"/>
+    <ROW Directory="IconGambar_1_Dir" Directory_Parent="src_Dir" DefaultDir="ICONGA~1|IconGambar" DirectoryOptions="3"/>
+    <ROW Directory="IconGambar_Dir" Directory_Parent="classes_Dir" DefaultDir="ICONGA~1|IconGambar" DirectoryOptions="3"/>
+    <ROW Directory="Peminjam_1_Dir" Directory_Parent="src_Dir" DefaultDir="Peminjam" DirectoryOptions="3"/>
+    <ROW Directory="Peminjam_Dir" Directory_Parent="classes_Dir" DefaultDir="Peminjam" DirectoryOptions="3"/>
+    <ROW Directory="Recapzv2_Dir" Directory_Parent="APPDIR" DefaultDir="RECAPZ~1|Recapz-v2" DirectoryOptions="3"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="__10_Dir" Directory_Parent="objects_Dir" DefaultDir="36" DirectoryOptions="3"/>
+    <ROW Directory="__11_Dir" Directory_Parent="objects_Dir" DefaultDir="38" DirectoryOptions="3"/>
+    <ROW Directory="__12_Dir" Directory_Parent="objects_Dir" DefaultDir="47" DirectoryOptions="3"/>
+    <ROW Directory="__13_Dir" Directory_Parent="objects_Dir" DefaultDir="48" DirectoryOptions="3"/>
+    <ROW Directory="__14_Dir" Directory_Parent="objects_Dir" DefaultDir="49" DirectoryOptions="3"/>
+    <ROW Directory="__15_Dir" Directory_Parent="objects_Dir" DefaultDir="52" DirectoryOptions="3"/>
+    <ROW Directory="__16_Dir" Directory_Parent="objects_Dir" DefaultDir="54" DirectoryOptions="3"/>
+    <ROW Directory="__17_Dir" Directory_Parent="objects_Dir" DefaultDir="56" DirectoryOptions="3"/>
+    <ROW Directory="__18_Dir" Directory_Parent="objects_Dir" DefaultDir="63" DirectoryOptions="3"/>
+    <ROW Directory="__19_Dir" Directory_Parent="objects_Dir" DefaultDir="65" DirectoryOptions="3"/>
+    <ROW Directory="__1_Dir" Directory_Parent="objects_Dir" DefaultDir="05" DirectoryOptions="3"/>
+    <ROW Directory="__20_Dir" Directory_Parent="objects_Dir" DefaultDir="74" DirectoryOptions="3"/>
+    <ROW Directory="__21_Dir" Directory_Parent="objects_Dir" DefaultDir="79" DirectoryOptions="3"/>
+    <ROW Directory="__22_Dir" Directory_Parent="objects_Dir" DefaultDir="80" DirectoryOptions="3"/>
+    <ROW Directory="__23_Dir" Directory_Parent="objects_Dir" DefaultDir="86" DirectoryOptions="3"/>
+    <ROW Directory="__24_Dir" Directory_Parent="objects_Dir" DefaultDir="88" DirectoryOptions="3"/>
+    <ROW Directory="__25_Dir" Directory_Parent="objects_Dir" DefaultDir="90" DirectoryOptions="3"/>
+    <ROW Directory="__26_Dir" Directory_Parent="objects_Dir" DefaultDir="92" DirectoryOptions="3"/>
+    <ROW Directory="__27_Dir" Directory_Parent="objects_Dir" DefaultDir="93" DirectoryOptions="3"/>
+    <ROW Directory="__28_Dir" Directory_Parent="objects_Dir" DefaultDir="94" DirectoryOptions="3"/>
+    <ROW Directory="__29_Dir" Directory_Parent="objects_Dir" DefaultDir="95" DirectoryOptions="3"/>
+    <ROW Directory="__2_Dir" Directory_Parent="objects_Dir" DefaultDir="09" DirectoryOptions="3"/>
+    <ROW Directory="__30_Dir" Directory_Parent="objects_Dir" DefaultDir="96" DirectoryOptions="3"/>
+    <ROW Directory="__3_Dir" Directory_Parent="objects_Dir" DefaultDir="14" DirectoryOptions="3"/>
+    <ROW Directory="__4_Dir" Directory_Parent="objects_Dir" DefaultDir="15" DirectoryOptions="3"/>
+    <ROW Directory="__5_Dir" Directory_Parent="objects_Dir" DefaultDir="19" DirectoryOptions="3"/>
+    <ROW Directory="__6_Dir" Directory_Parent="objects_Dir" DefaultDir="20" DirectoryOptions="3"/>
+    <ROW Directory="__7_Dir" Directory_Parent="objects_Dir" DefaultDir="28" DirectoryOptions="3"/>
+    <ROW Directory="__8_Dir" Directory_Parent="objects_Dir" DefaultDir="31" DirectoryOptions="3"/>
+    <ROW Directory="__9_Dir" Directory_Parent="objects_Dir" DefaultDir="32" DirectoryOptions="3"/>
+    <ROW Directory="__Dir" Directory_Parent="objects_Dir" DefaultDir="03" DirectoryOptions="3"/>
+    <ROW Directory="a_1_Dir" Directory_Parent="objects_Dir" DefaultDir="3a" DirectoryOptions="3"/>
+    <ROW Directory="a_2_Dir" Directory_Parent="objects_Dir" DefaultDir="5a" DirectoryOptions="3"/>
+    <ROW Directory="a_3_Dir" Directory_Parent="objects_Dir" DefaultDir="6a" DirectoryOptions="3"/>
+    <ROW Directory="a_4_Dir" Directory_Parent="objects_Dir" DefaultDir="7a" DirectoryOptions="3"/>
+    <ROW Directory="a_Dir" Directory_Parent="objects_Dir" DefaultDir="2a" DirectoryOptions="3"/>
+    <ROW Directory="aa_Dir" Directory_Parent="objects_Dir" DefaultDir="aa" DirectoryOptions="3"/>
+    <ROW Directory="b4_Dir" Directory_Parent="objects_Dir" DefaultDir="b4" DirectoryOptions="3"/>
+    <ROW Directory="b_1_Dir" Directory_Parent="objects_Dir" DefaultDir="4b" DirectoryOptions="3"/>
+    <ROW Directory="b_Dir" Directory_Parent="objects_Dir" DefaultDir="1b" DirectoryOptions="3"/>
+    <ROW Directory="ba_Dir" Directory_Parent="objects_Dir" DefaultDir="ba" DirectoryOptions="3"/>
+    <ROW Directory="bd_Dir" Directory_Parent="objects_Dir" DefaultDir="bd" DirectoryOptions="3"/>
+    <ROW Directory="build_Dir" Directory_Parent="Recapzv2_Dir" DefaultDir="build" DirectoryOptions="3"/>
+    <ROW Directory="c6_Dir" Directory_Parent="objects_Dir" DefaultDir="c6" DirectoryOptions="3"/>
+    <ROW Directory="c7_Dir" Directory_Parent="objects_Dir" DefaultDir="c7" DirectoryOptions="3"/>
+    <ROW Directory="c_1_Dir" Directory_Parent="objects_Dir" DefaultDir="1c" DirectoryOptions="3"/>
+    <ROW Directory="c_2_Dir" Directory_Parent="objects_Dir" DefaultDir="6c" DirectoryOptions="3"/>
+    <ROW Directory="c_3_Dir" Directory_Parent="objects_Dir" DefaultDir="8c" DirectoryOptions="3"/>
+    <ROW Directory="c_Dir" Directory_Parent="objects_Dir" DefaultDir="0c" DirectoryOptions="3"/>
+    <ROW Directory="ce_Dir" Directory_Parent="objects_Dir" DefaultDir="ce" DirectoryOptions="3"/>
+    <ROW Directory="cf_Dir" Directory_Parent="objects_Dir" DefaultDir="cf" DirectoryOptions="3"/>
+    <ROW Directory="classes_Dir" Directory_Parent="build_Dir" DefaultDir="classes" DirectoryOptions="3"/>
+    <ROW Directory="d0_Dir" Directory_Parent="objects_Dir" DefaultDir="d0" DirectoryOptions="3"/>
+    <ROW Directory="d4_Dir" Directory_Parent="objects_Dir" DefaultDir="d4" DirectoryOptions="3"/>
+    <ROW Directory="d6_Dir" Directory_Parent="objects_Dir" DefaultDir="d6" DirectoryOptions="3"/>
+    <ROW Directory="d7_Dir" Directory_Parent="objects_Dir" DefaultDir="d7" DirectoryOptions="3"/>
+    <ROW Directory="d9_Dir" Directory_Parent="objects_Dir" DefaultDir="d9" DirectoryOptions="3"/>
+    <ROW Directory="d_1_Dir" Directory_Parent="objects_Dir" DefaultDir="6d" DirectoryOptions="3"/>
+    <ROW Directory="d_Dir" Directory_Parent="objects_Dir" DefaultDir="0d" DirectoryOptions="3"/>
+    <ROW Directory="db_Dir" Directory_Parent="objects_Dir" DefaultDir="db" DirectoryOptions="3"/>
+    <ROW Directory="df_Dir" Directory_Parent="objects_Dir" DefaultDir="df" DirectoryOptions="3"/>
+    <ROW Directory="dist_Dir" Directory_Parent="Recapzv2_Dir" DefaultDir="dist" DirectoryOptions="3"/>
+    <ROW Directory="e1_Dir" Directory_Parent="objects_Dir" DefaultDir="e1" DirectoryOptions="3"/>
+    <ROW Directory="e5_Dir" Directory_Parent="objects_Dir" DefaultDir="e5" DirectoryOptions="3"/>
+    <ROW Directory="e7_Dir" Directory_Parent="objects_Dir" DefaultDir="e7" DirectoryOptions="3"/>
+    <ROW Directory="e9_Dir" Directory_Parent="objects_Dir" DefaultDir="e9" DirectoryOptions="3"/>
+    <ROW Directory="e_Dir" Directory_Parent="objects_Dir" DefaultDir="7e" DirectoryOptions="3"/>
+    <ROW Directory="eb_Dir" Directory_Parent="objects_Dir" DefaultDir="eb" DirectoryOptions="3"/>
+    <ROW Directory="ec_Dir" Directory_Parent="objects_Dir" DefaultDir="ec" DirectoryOptions="3"/>
+    <ROW Directory="f6_Dir" Directory_Parent="objects_Dir" DefaultDir="f6" DirectoryOptions="3"/>
+    <ROW Directory="f8_Dir" Directory_Parent="objects_Dir" DefaultDir="f8" DirectoryOptions="3"/>
+    <ROW Directory="f_1_Dir" Directory_Parent="objects_Dir" DefaultDir="4f" DirectoryOptions="3"/>
+    <ROW Directory="f_2_Dir" Directory_Parent="objects_Dir" DefaultDir="5f" DirectoryOptions="3"/>
+    <ROW Directory="f_3_Dir" Directory_Parent="objects_Dir" DefaultDir="8f" DirectoryOptions="3"/>
+    <ROW Directory="f_Dir" Directory_Parent="objects_Dir" DefaultDir="2f" DirectoryOptions="3"/>
+    <ROW Directory="fb_Dir" Directory_Parent="objects_Dir" DefaultDir="fb" DirectoryOptions="3"/>
+    <ROW Directory="ff_Dir" Directory_Parent="objects_Dir" DefaultDir="ff" DirectoryOptions="3"/>
+    <ROW Directory="git_Dir" Directory_Parent="Recapzv2_Dir" DefaultDir="GIT~1|.git" DirectoryOptions="3"/>
+    <ROW Directory="heads_1_Dir" Directory_Parent="refs_1_Dir" DefaultDir="heads" DirectoryOptions="3"/>
+    <ROW Directory="heads_Dir" Directory_Parent="refs_Dir" DefaultDir="heads" DirectoryOptions="3"/>
+    <ROW Directory="hooks_Dir" Directory_Parent="git_Dir" DefaultDir="hooks" DirectoryOptions="3"/>
+    <ROW Directory="info_Dir" Directory_Parent="git_Dir" DefaultDir="info" DirectoryOptions="3"/>
+    <ROW Directory="lib_Dir" Directory_Parent="dist_Dir" DefaultDir="lib" DirectoryOptions="3"/>
+    <ROW Directory="logs_Dir" Directory_Parent="git_Dir" DefaultDir="logs" DirectoryOptions="3"/>
+    <ROW Directory="nbproject_Dir" Directory_Parent="Recapzv2_Dir" DefaultDir="NBPROJ~1|nbproject" DirectoryOptions="3"/>
+    <ROW Directory="objects_Dir" Directory_Parent="git_Dir" DefaultDir="objects" DirectoryOptions="3"/>
+    <ROW Directory="origin_1_Dir" Directory_Parent="remotes_1_Dir" DefaultDir="origin" DirectoryOptions="3"/>
+    <ROW Directory="origin_Dir" Directory_Parent="remotes_Dir" DefaultDir="origin" DirectoryOptions="3"/>
+    <ROW Directory="private_Dir" Directory_Parent="nbproject_Dir" DefaultDir="private" DirectoryOptions="3"/>
+    <ROW Directory="refs_1_Dir" Directory_Parent="git_Dir" DefaultDir="refs" DirectoryOptions="3"/>
+    <ROW Directory="refs_Dir" Directory_Parent="logs_Dir" DefaultDir="refs" DirectoryOptions="3"/>
+    <ROW Directory="remotes_1_Dir" Directory_Parent="refs_1_Dir" DefaultDir="remotes" DirectoryOptions="3"/>
+    <ROW Directory="remotes_Dir" Directory_Parent="refs_Dir" DefaultDir="remotes" DirectoryOptions="3"/>
+    <ROW Directory="src_Dir" Directory_Parent="Recapzv2_Dir" DefaultDir="src" DirectoryOptions="3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SideBySideGuidComponent">
+    <ROW Component="APPDIR" Value="{8BDFB7D7-B20D-43A3-B931-EBBA943FEE8D}"/>
+    <ROW Component="ProductInformation" Value="{E3F45617-C928-4EB9-92A6-5CE74B5BF964}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{8BDFB7D7-B20D-43A3-B931-EBBA943FEE8D}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="AbsoluteLayout.jar" ComponentId="{7D00D501-CF68-4299-B976-CE0061C24161}" Directory_="lib_Dir" Attributes="0" KeyPath="AbsoluteLayout.jar" Type="0"/>
+    <ROW Component="COMMIT_EDITMSG" ComponentId="{1DF41880-1344-4488-ACCD-143AB6541810}" Directory_="git_Dir" Attributes="0" KeyPath="COMMIT_EDITMSG" Type="0"/>
+    <ROW Component="DatabaseConnection.class" ComponentId="{ABAA0573-6C8C-49B3-ABB2-B12F9839D084}" Directory_="DashboardMenuUtama_Dir" Attributes="0" KeyPath="DatabaseConnection.class" Type="0"/>
+    <ROW Component="DatabaseConnection.java" ComponentId="{B981BB04-B05E-4443-BDE9-A204EA5CB0F6}" Directory_="DashboardMenuUtama_1_Dir" Attributes="0" KeyPath="DatabaseConnection.java" Type="0"/>
+    <ROW Component="HEAD" ComponentId="{BB70BD51-1401-460E-BA0F-7C2361E4FEA3}" Directory_="logs_Dir" Attributes="0" KeyPath="HEAD_1" Type="0"/>
+    <ROW Component="HEAD_1" ComponentId="{897AD771-529C-4D02-904F-5618B55112EA}" Directory_="origin_Dir" Attributes="0" KeyPath="HEAD_2" Type="0"/>
+    <ROW Component="HEAD_2" ComponentId="{11377A71-911B-49B6-92B4-BB2050991F28}" Directory_="origin_1_Dir" Attributes="0" KeyPath="HEAD_3" Type="0"/>
+    <ROW Component="PanelAnggota.form" ComponentId="{A92A9E59-6C2C-4499-801F-45DD41F5DC5F}" Directory_="Anggota_1_Dir" Attributes="0" KeyPath="PanelAnggota.form" Type="0"/>
+    <ROW Component="PanelAnggota1.class" ComponentId="{E6558685-38A2-422B-9845-CCF08BDD1308}" Directory_="Anggota_Dir" Attributes="0" KeyPath="PanelAnggota1.class" Type="0"/>
+    <ROW Component="PanelBuku.form" ComponentId="{91ABD600-8304-4343-A88A-1D855F3E11CD}" Directory_="Buku_1_Dir" Attributes="0" KeyPath="PanelBuku.form" Type="0"/>
+    <ROW Component="PanelBuku1.class" ComponentId="{8E15326A-AA61-456E-85B1-A7FFEC13E015}" Directory_="Buku_Dir" Attributes="0" KeyPath="PanelBuku1.class" Type="0"/>
+    <ROW Component="PanelPeminjam.form" ComponentId="{379CDAEC-0A7C-47BE-B345-01DE78DA90A2}" Directory_="Peminjam_1_Dir" Attributes="0" KeyPath="PanelPeminjam.form" Type="0"/>
+    <ROW Component="PanelPeminjam1.class" ComponentId="{44485643-5374-47EA-AC80-4AAF83B7F8E8}" Directory_="Peminjam_Dir" Attributes="0" KeyPath="PanelPeminjam1.class" Type="0"/>
+    <ROW Component="ProductInformation" ComponentId="{E3F45617-C928-4EB9-92A6-5CE74B5BF964}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="README.TXT" ComponentId="{D529E34E-C983-4CDD-AE8B-BC2F5B9B5186}" Directory_="dist_Dir" Attributes="0" KeyPath="README.TXT" Type="0"/>
+    <ROW Component="RECAPZPerpustakaan.exe" ComponentId="{BA2F18B5-E1F1-473C-8FA2-598CE57A8F57}" Directory_="APPDIR" Attributes="0" KeyPath="RECAPZPerpustakaan.exe"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{81361565-8A45-45FD-90AB-12F3D65C95C0}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="a0064eee6e0b5ce724865a334ea1a3f5cae5" ComponentId="{E3E97ED2-6D66-45A4-BCE0-6F850F310FCC}" Directory_="__17_Dir" Attributes="0" KeyPath="a0064eee6e0b5ce724865a334ea1a3f5cae5" Type="0"/>
+    <ROW Component="a16c074275befb193c1d872c73cf562692a73" ComponentId="{3F34DCD9-C7E0-4733-97D3-C0498E917548}" Directory_="e_Dir" Attributes="0" KeyPath="a16c074275befb193c1d872c73cf562692a73" Type="0"/>
+    <ROW Component="a22806edeea38acb38962b628fbb32fb104e6" ComponentId="{14BE64E5-F24A-4B0F-872E-9EDE64522984}" Directory_="__13_Dir" Attributes="0" KeyPath="a22806edeea38acb38962b628fbb32fb104e6" Type="0"/>
+    <ROW Component="a266d987034c99c2140281ba128aae49e0db6" ComponentId="{E3A714C2-8DCE-4B27-8216-D710F8D38D99}" Directory_="e9_Dir" Attributes="0" KeyPath="a266d987034c99c2140281ba128aae49e0db6" Type="0"/>
+    <ROW Component="a30c77cf39587a0dbb08d5029ace37f01ae02" ComponentId="{94909D44-D092-4623-B628-02E9F137F979}" Directory_="a_3_Dir" Attributes="0" KeyPath="a30c77cf39587a0dbb08d5029ace37f01ae02" Type="0"/>
+    <ROW Component="a3ff5568a0aa1ade2bc71d8d6f7f91761a" ComponentId="{EEBF3C35-8ED2-40F5-840D-36A7986743E8}" Directory_="c_2_Dir" Attributes="0" KeyPath="a3ff5568a0aa1ade2bc71d8d6f7f91761a" Type="0"/>
+    <ROW Component="a4468b9d6584bdb4e2a266a6005635ec30e743" ComponentId="{47F63B5C-E044-468A-814C-C862848B2ADF}" Directory_="a_2_Dir" Attributes="0" KeyPath="a4468b9d6584bdb4e2a266a6005635ec30e743" Type="0"/>
+    <ROW Component="a48563116939475f7f06c91da07e729dd7e" ComponentId="{99BBD44B-7593-4FA5-8609-554A3FFD824C}" Directory_="eb_Dir" Attributes="0" KeyPath="a48563116939475f7f06c91da07e729dd7e" Type="0"/>
+    <ROW Component="a506e3e132643f7c00b31aa10383115dde7fdb" ComponentId="{B8C72620-8B29-4357-A5D2-AA064DC82B82}" Directory_="f_1_Dir" Attributes="0" KeyPath="a506e3e132643f7c00b31aa10383115dde7fdb" Type="0"/>
+    <ROW Component="a71a6135bceacc6d140eeaa9d6f09e6" ComponentId="{D3C57756-B4EF-4931-8018-2D09C2A2949D}" Directory_="ba_Dir" Attributes="0" KeyPath="a71a6135bceacc6d140eeaa9d6f09e6" Type="0"/>
+    <ROW Component="a95c9b560f70cbd17c753ad4388b1e0c77df2b" ComponentId="{D64212C8-11F0-4E20-AC74-BE0B93FA5403}" Directory_="__26_Dir" Attributes="0" KeyPath="a95c9b560f70cbd17c753ad4388b1e0c77df2b" Type="0"/>
+    <ROW Component="a9bc11336e03ff1f1f3a835720305a223f13" ComponentId="{D5083AAF-357D-4036-98AA-E810574A0B09}" Directory_="cf_Dir" Attributes="0" KeyPath="a9bc11336e03ff1f1f3a835720305a223f13" Type="0"/>
+    <ROW Component="ab308464056892139f1f72c18524f4e351e35" ComponentId="{12BE1127-E7CF-46C6-ABE5-42B1D8BCC160}" Directory_="b_Dir" Attributes="0" KeyPath="ab308464056892139f1f72c18524f4e351e35" Type="0"/>
+    <ROW Component="abaffb8ecc0216f3815ea6f69f36af2800f695" ComponentId="{6A067356-B890-455B-83CB-85E3AFA7CAF2}" Directory_="d_1_Dir" Attributes="0" KeyPath="abaffb8ecc0216f3815ea6f69f36af2800f695" Type="0"/>
+    <ROW Component="ac9cd5b87fa817160d143d430a6f9318d46d" ComponentId="{8A832E41-3B57-450E-8826-E58C68374C44}" Directory_="fb_Dir" Attributes="0" KeyPath="ac9cd5b87fa817160d143d430a6f9318d46d" Type="0"/>
+    <ROW Component="ad9521d24ffa99e729ce19d85060fa77c74df5" ComponentId="{76A0C3AD-5A0E-4CCB-9347-150A1B266FBE}" Directory_="e7_Dir" Attributes="0" KeyPath="ad9521d24ffa99e729ce19d85060fa77c74df5" Type="0"/>
+    <ROW Component="ada11edd58e55b1d968ea20fb1ccd7a" ComponentId="{29489F7F-E3D2-4616-83A8-735C8012872F}" Directory_="f_3_Dir" Attributes="0" KeyPath="ada11edd58e55b1d968ea20fb1ccd7a" Type="0"/>
+    <ROW Component="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" ComponentId="{4D8FBEE4-25A0-47EF-87F7-A3E95C010BD1}" Directory_="IconGambar_Dir" Attributes="0" KeyPath="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Type="0"/>
+    <ROW Component="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" ComponentId="{53942DAE-1AE5-459C-8B93-DF5A12CFFCF4}" Directory_="IconGambar_1_Dir" Attributes="0" KeyPath="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" Type="0"/>
+    <ROW Component="ae16e07a5fdb0e6a735c7d3b578d666778589" ComponentId="{44C2C6C1-6D9B-4C9A-AEAB-0907A819883C}" Directory_="__29_Dir" Attributes="0" KeyPath="ae16e07a5fdb0e6a735c7d3b578d666778589" Type="0"/>
+    <ROW Component="ae8c4a9a359b60f93f494157249b4f8f3" ComponentId="{B0C1E586-112A-4C8A-A85C-E1CA3B26AAEF}" Directory_="__20_Dir" Attributes="0" KeyPath="ae8c4a9a359b60f93f494157249b4f8f3" Type="0"/>
+    <ROW Component="applypatchmsg.sample" ComponentId="{6C864457-ED01-4395-ACF0-02B280F0016C}" Directory_="hooks_Dir" Attributes="0" KeyPath="applypatchmsg.sample" Type="0"/>
+    <ROW Component="b058810d3cf31dbafe9e18178df185bf4" ComponentId="{F6F0D338-FCA5-442A-979E-248D51C649E6}" Directory_="__16_Dir" Attributes="0" KeyPath="b058810d3cf31dbafe9e18178df185bf4" Type="0"/>
+    <ROW Component="b35f88423815b4a3c43c619e659b50147e7965" ComponentId="{8BAE9A30-6DD3-4F25-8C8C-E4E39BDE87D1}" Directory_="__5_Dir" Attributes="0" KeyPath="b35f88423815b4a3c43c619e659b50147e7965" Type="0"/>
+    <ROW Component="b39d67f11b20c7fbd005316f8144bfe355b535" ComponentId="{A5A03A3B-6390-42EA-9B00-1279861E7124}" Directory_="__14_Dir" Attributes="0" KeyPath="b39d67f11b20c7fbd005316f8144bfe355b535" Type="0"/>
+    <ROW Component="b4ac2a6bde12948fd3b7f39b363249b16f2002" ComponentId="{4D2F6435-DA6C-4910-AB59-88AD9A492077}" Directory_="bd_Dir" Attributes="0" KeyPath="b4ac2a6bde12948fd3b7f39b363249b16f2002" Type="0"/>
+    <ROW Component="b670c35c56a0f6d3d796241c04fa3c52a08" ComponentId="{C0106FC7-7C21-4C8B-9CCE-A041310A24EB}" Directory_="a_4_Dir" Attributes="0" KeyPath="b670c35c56a0f6d3d796241c04fa3c52a08" Type="0"/>
+    <ROW Component="b8e1f1ce9e9cb2eef7e617a5d13a2349737ac8" ComponentId="{4484E089-C85B-4693-AF39-104E068DF2E7}" Directory_="e1_Dir" Attributes="0" KeyPath="b8e1f1ce9e9cb2eef7e617a5d13a2349737ac8" Type="0"/>
+    <ROW Component="b8e8469f8289087225df5e4eab244cfcb0df20" ComponentId="{C7036726-48DE-4F8D-BF7D-FE53402AF82C}" Directory_="__6_Dir" Attributes="0" KeyPath="b8e8469f8289087225df5e4eab244cfcb0df20" Type="0"/>
+    <ROW Component="baa40ed3160ea2693b22358bac9d2e05ed0fb" ComponentId="{62A0D441-95EE-47A3-81B8-23FFABEE6A3F}" Directory_="aa_Dir" Attributes="0" KeyPath="baa40ed3160ea2693b22358bac9d2e05ed0fb" Type="0"/>
+    <ROW Component="bbfa85fddb977db8a22fee63052c404e087516" ComponentId="{3DD60317-18F7-48A6-9FA3-7275F665413B}" Directory_="b_1_Dir" Attributes="0" KeyPath="bbfa85fddb977db8a22fee63052c404e087516" Type="0"/>
+    <ROW Component="bc980dbb8b7a507eb180a6a8b04a135374346" ComponentId="{738CB148-39E6-44CA-BE79-A555492918A2}" Directory_="a_Dir" Attributes="0" KeyPath="bc980dbb8b7a507eb180a6a8b04a135374346" Type="0"/>
+    <ROW Component="be8a7ba6e9d5ec0131f0a42f5f4b96ca39de23" ComponentId="{BACECE0E-BC58-4BF5-BC53-772E4AD35AE7}" Directory_="f_Dir" Attributes="0" KeyPath="be8a7ba6e9d5ec0131f0a42f5f4b96ca39de23" Type="0"/>
+    <ROW Component="bee4150b087cb01ef142bf02553729b0d1def" ComponentId="{BFBA2494-AAC6-4B28-B835-F43BBB5614C2}" Directory_="__1_Dir" Attributes="0" KeyPath="bee4150b087cb01ef142bf02553729b0d1def" Type="0"/>
+    <ROW Component="buildimpl.xml" ComponentId="{57EB01A4-1F3A-4A6C-B265-2AADDEF03796}" Directory_="nbproject_Dir" Attributes="0" KeyPath="buildimpl.xml" Type="0"/>
+    <ROW Component="builtjar.properties" ComponentId="{1A011882-F3C3-4E7F-8D32-0890018C372F}" Directory_="build_Dir" Attributes="0" KeyPath="builtjar.properties" Type="0"/>
+    <ROW Component="c36c84b74848e6369273a2050bea659ede0" ComponentId="{D2C459A9-EC77-4C02-88C2-58067074AF50}" Directory_="ff_Dir" Attributes="0" KeyPath="c36c84b74848e6369273a2050bea659ede0" Type="0"/>
+    <ROW Component="c5b4da852eef1828d83d1efc68843731f282" ComponentId="{8ABC660C-D5BD-4BAE-A622-5D8AA0223D0A}" Directory_="__12_Dir" Attributes="0" KeyPath="c5b4da852eef1828d83d1efc68843731f282" Type="0"/>
+    <ROW Component="c960c8a3818dad4f665ecf04eeb4acddb2" ComponentId="{4715C342-5B11-4CF4-B72F-5B36798A9D50}" Directory_="__11_Dir" Attributes="0" KeyPath="c960c8a3818dad4f665ecf04eeb4acddb2" Type="0"/>
+    <ROW Component="cf5030c878765c043d84e30d75e410acbabd2" ComponentId="{2ABD0B1A-A18B-4CC4-80B8-E418B415E3C2}" Directory_="__28_Dir" Attributes="0" KeyPath="cf5030c878765c043d84e30d75e410acbabd2" Type="0"/>
+    <ROW Component="d0f0fdb5e4f2312540f35a7011df7133ac65" ComponentId="{AD68928D-9362-4F15-8FAA-A006AD225A0C}" Directory_="b4_Dir" Attributes="0" KeyPath="d0f0fdb5e4f2312540f35a7011df7133ac65" Type="0"/>
+    <ROW Component="d2a66cbc99fc6d67099126663d533f216b76" ComponentId="{450434B2-3620-41B4-B082-0606A00D971D}" Directory_="c7_Dir" Attributes="0" KeyPath="d2a66cbc99fc6d67099126663d533f216b76" Type="0"/>
+    <ROW Component="d4001b43df03364e567928218b9c0cc7b74af" ComponentId="{588FB622-E05C-4848-A32C-C379042B9098}" Directory_="ec_Dir" Attributes="0" KeyPath="d4001b43df03364e567928218b9c0cc7b74af" Type="0"/>
+    <ROW Component="d5e2a47f6b3c2ccf4e747e43ee34273d0417" ComponentId="{3C024F3F-2523-47B7-8375-04D55E2C3FFE}" Directory_="d0_Dir" Attributes="0" KeyPath="d5e2a47f6b3c2ccf4e747e43ee34273d0417" Type="0"/>
+    <ROW Component="d7935672ce5baf1fe7306fc46671f6cd5b4" ComponentId="{EB14ED36-9475-429A-8901-857F48E35150}" Directory_="f_2_Dir" Attributes="0" KeyPath="d7935672ce5baf1fe7306fc46671f6cd5b4" Type="0"/>
+    <ROW Component="d7d7aefacd3519a82a8bfc7e19fd6c2e76" ComponentId="{7FC39EDA-950F-43D1-9E96-21591F3A2AD0}" Directory_="c_1_Dir" Attributes="0" KeyPath="d7d7aefacd3519a82a8bfc7e19fd6c2e76" Type="0"/>
+    <ROW Component="d88bbfc39f9af15365b90b0ddd43c03c7d0626" ComponentId="{0E0A87B2-DEF9-4F40-9D1A-3766BC59C1F4}" Directory_="d7_Dir" Attributes="0" KeyPath="d88bbfc39f9af15365b90b0ddd43c03c7d0626" Type="0"/>
+    <ROW Component="daa1c99e41b9cfbb3444d0e3aede2c9babff6" ComponentId="{E713AF0F-AF73-46E2-AA1F-0CD349A298B3}" Directory_="db_Dir" Attributes="0" KeyPath="daa1c99e41b9cfbb3444d0e3aede2c9babff6" Type="0"/>
+    <ROW Component="dcb0bd3574e1adf35102c0d0e254ac11" ComponentId="{88817862-5CA8-42BB-A7D1-DA72A64F9FF5}" Directory_="__7_Dir" Attributes="0" KeyPath="dcb0bd3574e1adf35102c0d0e254ac11" Type="0"/>
+    <ROW Component="dfb20ef0509166c8a5413a426e98ae92f6c84c" ComponentId="{F4733361-66A9-42F1-9E43-049A9CDC8E69}" Directory_="__22_Dir" Attributes="0" KeyPath="dfb20ef0509166c8a5413a426e98ae92f6c84c" Type="0"/>
+    <ROW Component="e0770424b2a19faf507a501ebfc23be8f54e7b" ComponentId="{BE9D09D9-7BCD-4F9A-A5EA-BFF851853F30}" Directory_="df_Dir" Attributes="0" KeyPath="e0770424b2a19faf507a501ebfc23be8f54e7b" Type="0"/>
+    <ROW Component="e2e1c6b1958c35d39688988e7b6732f14963a" ComponentId="{C0D26377-259E-45DA-A2B3-C21F89302C75}" Directory_="c_Dir" Attributes="0" KeyPath="e2e1c6b1958c35d39688988e7b6732f14963a" Type="0"/>
+    <ROW Component="e31d42c167ed776c07011f2d239a2ed7dc9931" ComponentId="{0C450858-C5E0-47A2-A5F1-BAE69F504B2B}" Directory_="__18_Dir" Attributes="0" KeyPath="e31d42c167ed776c07011f2d239a2ed7dc9931" Type="0"/>
+    <ROW Component="e39ede1d218db9952763555503e485e3195805" ComponentId="{75EB92B0-F7F5-4FD8-B343-765D2F58CAD9}" Directory_="__Dir" Attributes="0" KeyPath="e39ede1d218db9952763555503e485e3195805" Type="0"/>
+    <ROW Component="e5053154c056544047754749dcfe9d8fb69097" ComponentId="{5C1579B2-B92D-4099-839A-8F749B713124}" Directory_="__30_Dir" Attributes="0" KeyPath="e5053154c056544047754749dcfe9d8fb69097" Type="0"/>
+    <ROW Component="e87af79ff1ec771d97ca021900ed49411594" ComponentId="{FB791781-C380-47BD-98A2-D70C83ADD226}" Directory_="__27_Dir" Attributes="0" KeyPath="e87af79ff1ec771d97ca021900ed49411594" Type="0"/>
+    <ROW Component="e8e5bc3b7f1f7bad2bc0751a933e00c801983" ComponentId="{687C8A6E-0AF8-430F-9420-6F718A7040C4}" Directory_="__9_Dir" Attributes="0" KeyPath="e8e5bc3b7f1f7bad2bc0751a933e00c801983" Type="0"/>
+    <ROW Component="e91382f8b7d5195453003f712c8f72fba67e" ComponentId="{1917BE6B-CF69-40E8-9893-3A89C46FD329}" Directory_="__23_Dir" Attributes="0" KeyPath="e91382f8b7d5195453003f712c8f72fba67e" Type="0"/>
+    <ROW Component="e92876bb61ff1482450bb71ea6255d5b07467c" ComponentId="{9D3A4F19-D4CB-4CD5-AD14-78EF57D602F8}" Directory_="d6_Dir" Attributes="0" KeyPath="e92876bb61ff1482450bb71ea6255d5b07467c" Type="0"/>
+    <ROW Component="eaa6af39cb98c5e19805fcf24f7efe278a2" ComponentId="{7C82670A-FEA0-4F37-9DBF-01B7B97E1F57}" Directory_="d9_Dir" Attributes="0" KeyPath="eaa6af39cb98c5e19805fcf24f7efe278a2" Type="0"/>
+    <ROW Component="ec4eb7931e571d188e271e0e1a93da505" ComponentId="{718942B5-5598-4A38-8B06-C5AE30E6E717}" Directory_="e5_Dir" Attributes="0" KeyPath="ec4eb7931e571d188e271e0e1a93da505" Type="0"/>
+    <ROW Component="ec8316e7b3ba74e5f0a56ce761246096731339" ComponentId="{B76CD1AE-E049-452F-B010-6FA90A706639}" Directory_="__4_Dir" Attributes="0" KeyPath="ec8316e7b3ba74e5f0a56ce761246096731339" Type="0"/>
+    <ROW Component="ec8462beb3aafd0946bafb1cb86a7fce8680a5" ComponentId="{A57A247E-A710-49A4-9A98-32960549909E}" Directory_="__24_Dir" Attributes="0" KeyPath="ec8462beb3aafd0946bafb1cb86a7fce8680a5" Type="0"/>
+    <ROW Component="ed6ce7dcae3d6efedbf7d1063daca5ed8f742" ComponentId="{EEAFDE4A-F6F9-402C-B158-29DC4BB70113}" Directory_="__3_Dir" Attributes="0" KeyPath="ed6ce7dcae3d6efedbf7d1063daca5ed8f742" Type="0"/>
+    <ROW Component="exclude" ComponentId="{21D18D28-1B07-420F-8182-9A0FB85D6689}" Directory_="info_Dir" Attributes="0" KeyPath="exclude" Type="0"/>
+    <ROW Component="f0963bd1d8c6149eb6f2dc52a5fc50c7637ad" ComponentId="{B5978CC8-5FC9-4D04-A70F-E2AF53DC0E18}" Directory_="__15_Dir" Attributes="0" KeyPath="f0963bd1d8c6149eb6f2dc52a5fc50c7637ad" Type="0"/>
+    <ROW Component="f0cc9197480fd97bd898208dca2ec9f29ac4c" ComponentId="{5858109E-515E-4AD4-8366-252B34F22B57}" Directory_="c_3_Dir" Attributes="0" KeyPath="f0cc9197480fd97bd898208dca2ec9f29ac4c" Type="0"/>
+    <ROW Component="f161059a0b1ea1691fda54210f4276172a70" ComponentId="{E67FAAD9-232D-4183-9FE8-D2DAE36C810A}" Directory_="a_1_Dir" Attributes="0" KeyPath="f161059a0b1ea1691fda54210f4276172a70" Type="0"/>
+    <ROW Component="f1ca4c57af5efc3ac684c0f154b3558f626ccb" ComponentId="{D012B25D-52D2-47A3-91C2-E54DDDB829BD}" Directory_="f6_Dir" Attributes="0" KeyPath="f1ca4c57af5efc3ac684c0f154b3558f626ccb" Type="0"/>
+    <ROW Component="f3d1dfaa81461fa2e770921399b3" ComponentId="{FF47C18D-261D-4538-BE65-7B67772C5361}" Directory_="__19_Dir" Attributes="0" KeyPath="f3d1dfaa81461fa2e770921399b3" Type="0"/>
+    <ROW Component="fa0dc5ed0942cc19f93646ca4e76eb6341efc0" ComponentId="{AD1BE4CD-D0ED-4DF8-8F8C-EEB6DB0156D4}" Directory_="__25_Dir" Attributes="0" KeyPath="fa0dc5ed0942cc19f93646ca4e76eb6341efc0" Type="0"/>
+    <ROW Component="fa534c12b3d1ef61bb2b84d5b41ffbba6bd" ComponentId="{C0F19AAC-E105-47AA-846F-DA9AA7F73350}" Directory_="c6_Dir" Attributes="0" KeyPath="fa534c12b3d1ef61bb2b84d5b41ffbba6bd" Type="0"/>
+    <ROW Component="fd0c2256c23d6b0d6ae1d4e246b26e5605270" ComponentId="{9E3F6168-6103-4D26-998B-50AE3C4297AD}" Directory_="f8_Dir" Attributes="0" KeyPath="fd0c2256c23d6b0d6ae1d4e246b26e5605270" Type="0"/>
+    <ROW Component="fd8ce7a56aacdd0ec8ddbb7862f9ce6f3b8" ComponentId="{64EC8472-BF5C-4FFD-8114-96DB82336A42}" Directory_="d_Dir" Attributes="0" KeyPath="fd8ce7a56aacdd0ec8ddbb7862f9ce6f3b8" Type="0"/>
+    <ROW Component="fe06c35c3ebce190b2c41390f2fd6141a54c" ComponentId="{58D143C5-6D56-49F2-9C63-F1345B097021}" Directory_="__21_Dir" Attributes="0" KeyPath="fe06c35c3ebce190b2c41390f2fd6141a54c" Type="0"/>
+    <ROW Component="fe9c78d6fe7c2878d0e9d6e0de95e7ba1f59" ComponentId="{571FDDD5-3EAC-4114-AE4C-5AF8D2405B74}" Directory_="ce_Dir" Attributes="0" KeyPath="fe9c78d6fe7c2878d0e9d6e0de95e7ba1f59" Type="0"/>
+    <ROW Component="feb9de063fd991235b6bacab5344e96f8408" ComponentId="{06B6D79C-8203-4845-A3C0-6927608F1B42}" Directory_="__8_Dir" Attributes="0" KeyPath="feb9de063fd991235b6bacab5344e96f8408" Type="0"/>
+    <ROW Component="fede28c9b8249b7d72af5a8af9810ec9c31ce8" ComponentId="{7EF2B57C-4FCA-4FA9-9024-4A25C2430589}" Directory_="__10_Dir" Attributes="0" KeyPath="fede28c9b8249b7d72af5a8af9810ec9c31ce8" Type="0"/>
+    <ROW Component="feea8c044646c961239f3dd481d2e2666b488" ComponentId="{F4BFAF48-745C-4D65-917E-9025DADD8456}" Directory_="__2_Dir" Attributes="0" KeyPath="feea8c044646c961239f3dd481d2e2666b488" Type="0"/>
+    <ROW Component="fff25de086e1af76684dd9e0a52b96cce2dba7" ComponentId="{3E14E9CC-8880-4B4A-A15A-B4DD379C7B4B}" Directory_="d4_Dir" Attributes="0" KeyPath="fff25de086e1af76684dd9e0a52b96cce2dba7" Type="0"/>
+    <ROW Component="gitattributes" ComponentId="{F5A7DA71-0673-4760-935E-3E379119D579}" Directory_="Recapzv2_Dir" Attributes="0" KeyPath="gitattributes" Type="0"/>
+    <ROW Component="main" ComponentId="{B1805430-D78C-4168-9E79-07FD4F4DAF06}" Directory_="heads_Dir" Attributes="0" KeyPath="main" Type="0"/>
+    <ROW Component="main_1" ComponentId="{83CD1A1A-AB7F-4FAB-BC7B-25AFB88C8DB5}" Directory_="heads_1_Dir" Attributes="0" KeyPath="main_2" Type="0"/>
+    <ROW Component="private.properties" ComponentId="{6850FE19-2DB8-4A4A-97C6-F9FBBD74B194}" Directory_="private_Dir" Attributes="0" KeyPath="private.properties" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="COMMIT_EDITMSG" Component_="COMMIT_EDITMSG" FileName="COMMIT~1|COMMIT_EDITMSG" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\COMMIT_EDITMSG" SelfReg="false"/>
+    <ROW File="config" Component_="COMMIT_EDITMSG" FileName="config" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\config" SelfReg="false"/>
+    <ROW File="description" Component_="COMMIT_EDITMSG" FileName="DESCRI~1|description" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\description" SelfReg="false"/>
+    <ROW File="FETCH_HEAD" Component_="COMMIT_EDITMSG" FileName="FETCH_~1|FETCH_HEAD" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\FETCH_HEAD" SelfReg="false"/>
+    <ROW File="HEAD" Component_="COMMIT_EDITMSG" FileName="HEAD" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\HEAD" SelfReg="false"/>
+    <ROW File="applypatchmsg.sample" Component_="applypatchmsg.sample" FileName="APPLYP~1.SAM|applypatch-msg.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\applypatch-msg.sample" SelfReg="false"/>
+    <ROW File="commitmsg.sample" Component_="applypatchmsg.sample" FileName="COMMIT~1.SAM|commit-msg.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\commit-msg.sample" SelfReg="false"/>
+    <ROW File="fsmonitorwatchman.sample" Component_="applypatchmsg.sample" FileName="FSMONI~1.SAM|fsmonitor-watchman.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\fsmonitor-watchman.sample" SelfReg="false"/>
+    <ROW File="postupdate.sample" Component_="applypatchmsg.sample" FileName="POST-U~1.SAM|post-update.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\post-update.sample" SelfReg="false"/>
+    <ROW File="preapplypatch.sample" Component_="applypatchmsg.sample" FileName="PRE-AP~1.SAM|pre-applypatch.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\pre-applypatch.sample" SelfReg="false"/>
+    <ROW File="precommit.sample" Component_="applypatchmsg.sample" FileName="PRE-CO~1.SAM|pre-commit.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\pre-commit.sample" SelfReg="false"/>
+    <ROW File="premergecommit.sample" Component_="applypatchmsg.sample" FileName="PRE-ME~1.SAM|pre-merge-commit.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\pre-merge-commit.sample" SelfReg="false"/>
+    <ROW File="prepush.sample" Component_="applypatchmsg.sample" FileName="PRE-PU~1.SAM|pre-push.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\pre-push.sample" SelfReg="false"/>
+    <ROW File="prerebase.sample" Component_="applypatchmsg.sample" FileName="PRE-RE~1.SAM|pre-rebase.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\pre-rebase.sample" SelfReg="false"/>
+    <ROW File="prereceive.sample" Component_="applypatchmsg.sample" FileName="PRE-RE~2.SAM|pre-receive.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\pre-receive.sample" SelfReg="false"/>
+    <ROW File="preparecommitmsg.sample" Component_="applypatchmsg.sample" FileName="PREPAR~1.SAM|prepare-commit-msg.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\prepare-commit-msg.sample" SelfReg="false"/>
+    <ROW File="pushtocheckout.sample" Component_="applypatchmsg.sample" FileName="PUSH-T~1.SAM|push-to-checkout.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\push-to-checkout.sample" SelfReg="false"/>
+    <ROW File="sendemailvalidate.sample" Component_="applypatchmsg.sample" FileName="SENDEM~1.SAM|sendemail-validate.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\sendemail-validate.sample" SelfReg="false"/>
+    <ROW File="update.sample" Component_="applypatchmsg.sample" FileName="UPDATE~1.SAM|update.sample" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\hooks\update.sample" SelfReg="false"/>
+    <ROW File="index" Component_="COMMIT_EDITMSG" FileName="index" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\index" SelfReg="false"/>
+    <ROW File="exclude" Component_="exclude" FileName="exclude" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\info\exclude" SelfReg="false"/>
+    <ROW File="HEAD_1" Component_="HEAD" FileName="HEAD" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\logs\HEAD" SelfReg="false"/>
+    <ROW File="main" Component_="main" FileName="main" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\logs\refs\heads\main" SelfReg="false"/>
+    <ROW File="HEAD_2" Component_="HEAD_1" FileName="HEAD" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\logs\refs\remotes\origin\HEAD" SelfReg="false"/>
+    <ROW File="main_1" Component_="HEAD_1" FileName="main" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\logs\refs\remotes\origin\main" SelfReg="false"/>
+    <ROW File="e39ede1d218db9952763555503e485e3195805" Component_="e39ede1d218db9952763555503e485e3195805" FileName="E39EDE~1|e39ede1d218db9952763555503e485e3195805" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\03\e39ede1d218db9952763555503e485e3195805" SelfReg="false"/>
+    <ROW File="bee4150b087cb01ef142bf02553729b0d1def" Component_="bee4150b087cb01ef142bf02553729b0d1def" FileName="9BEE41~1|9bee4150b087cb01ef142bf02553729b0d1def" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\05\9bee4150b087cb01ef142bf02553729b0d1def" SelfReg="false"/>
+    <ROW File="feea8c044646c961239f3dd481d2e2666b488" Component_="feea8c044646c961239f3dd481d2e2666b488" FileName="9FEEA8~1|9feea8c044646c961239f3dd481d2e2666b488" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\09\9feea8c044646c961239f3dd481d2e2666b488" SelfReg="false"/>
+    <ROW File="e2e1c6b1958c35d39688988e7b6732f14963a" Component_="e2e1c6b1958c35d39688988e7b6732f14963a" FileName="2E2E1C~1|2e2e1c6b1958c35d39688988e7b6732f14963a" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\0c\2e2e1c6b1958c35d39688988e7b6732f14963a" SelfReg="false"/>
+    <ROW File="fd8ce7a56aacdd0ec8ddbb7862f9ce6f3b8" Component_="fd8ce7a56aacdd0ec8ddbb7862f9ce6f3b8" FileName="472FD8~1|472fd8ce7a56aacdd0ec8ddbb7862f9ce6f3b8" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\0d\472fd8ce7a56aacdd0ec8ddbb7862f9ce6f3b8" SelfReg="false"/>
+    <ROW File="ed6ce7dcae3d6efedbf7d1063daca5ed8f742" Component_="ed6ce7dcae3d6efedbf7d1063daca5ed8f742" FileName="4ED6CE~1|4ed6ce7dcae3d6efedbf7d1063daca5ed8f742" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\14\4ed6ce7dcae3d6efedbf7d1063daca5ed8f742" SelfReg="false"/>
+    <ROW File="ec8316e7b3ba74e5f0a56ce761246096731339" Component_="ec8316e7b3ba74e5f0a56ce761246096731339" FileName="EC8316~1|ec8316e7b3ba74e5f0a56ce761246096731339" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\15\ec8316e7b3ba74e5f0a56ce761246096731339" SelfReg="false"/>
+    <ROW File="b35f88423815b4a3c43c619e659b50147e7965" Component_="b35f88423815b4a3c43c619e659b50147e7965" FileName="B35F88~1|b35f88423815b4a3c43c619e659b50147e7965" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\19\b35f88423815b4a3c43c619e659b50147e7965" SelfReg="false"/>
+    <ROW File="ab308464056892139f1f72c18524f4e351e35" Component_="ab308464056892139f1f72c18524f4e351e35" FileName="2AB308~1|2ab308464056892139f1f72c18524f4e351e35" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\1b\2ab308464056892139f1f72c18524f4e351e35" SelfReg="false"/>
+    <ROW File="c0249658585f50d57e14e93e69fad3efab6f9" Component_="ab308464056892139f1f72c18524f4e351e35" FileName="6C0249~1|6c0249658585f50d57e14e93e69fad3efab6f9" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\1b\6c0249658585f50d57e14e93e69fad3efab6f9" SelfReg="false"/>
+    <ROW File="f181d8f3dd78252ef4cbd1eb0c88416f73faf" Component_="ab308464056892139f1f72c18524f4e351e35" FileName="9F181D~1|9f181d8f3dd78252ef4cbd1eb0c88416f73faf" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\1b\9f181d8f3dd78252ef4cbd1eb0c88416f73faf" SelfReg="false"/>
+    <ROW File="d7d7aefacd3519a82a8bfc7e19fd6c2e76" Component_="d7d7aefacd3519a82a8bfc7e19fd6c2e76" FileName="1009D7~1|1009d7d7aefacd3519a82a8bfc7e19fd6c2e76" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\1c\1009d7d7aefacd3519a82a8bfc7e19fd6c2e76" SelfReg="false"/>
+    <ROW File="b8e8469f8289087225df5e4eab244cfcb0df20" Component_="b8e8469f8289087225df5e4eab244cfcb0df20" FileName="B8E846~1|b8e8469f8289087225df5e4eab244cfcb0df20" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\20\b8e8469f8289087225df5e4eab244cfcb0df20" SelfReg="false"/>
+    <ROW File="dcb0bd3574e1adf35102c0d0e254ac11" Component_="dcb0bd3574e1adf35102c0d0e254ac11" FileName="751759~1|751759dcb0bd3574e1adf35102c0d0e254ac11" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\28\751759dcb0bd3574e1adf35102c0d0e254ac11" SelfReg="false"/>
+    <ROW File="bc980dbb8b7a507eb180a6a8b04a135374346" Component_="bc980dbb8b7a507eb180a6a8b04a135374346" FileName="1BC980~1|1bc980dbb8b7a507eb180a6a8b04a135374346" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\2a\1bc980dbb8b7a507eb180a6a8b04a135374346" SelfReg="false"/>
+    <ROW File="be8a7ba6e9d5ec0131f0a42f5f4b96ca39de23" Component_="be8a7ba6e9d5ec0131f0a42f5f4b96ca39de23" FileName="BE8A7B~1|be8a7ba6e9d5ec0131f0a42f5f4b96ca39de23" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\2f\be8a7ba6e9d5ec0131f0a42f5f4b96ca39de23" SelfReg="false"/>
+    <ROW File="feb9de063fd991235b6bacab5344e96f8408" Component_="feb9de063fd991235b6bacab5344e96f8408" FileName="78FEB9~1|78feb9de063fd991235b6bacab5344e96f8408" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\31\78feb9de063fd991235b6bacab5344e96f8408" SelfReg="false"/>
+    <ROW File="e8e5bc3b7f1f7bad2bc0751a933e00c801983" Component_="e8e5bc3b7f1f7bad2bc0751a933e00c801983" FileName="8E8E5B~1|8e8e5bc3b7f1f7bad2bc0751a933e00c801983" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\32\8e8e5bc3b7f1f7bad2bc0751a933e00c801983" SelfReg="false"/>
+    <ROW File="fede28c9b8249b7d72af5a8af9810ec9c31ce8" Component_="fede28c9b8249b7d72af5a8af9810ec9c31ce8" FileName="FEDE28~1|fede28c9b8249b7d72af5a8af9810ec9c31ce8" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\36\fede28c9b8249b7d72af5a8af9810ec9c31ce8" SelfReg="false"/>
+    <ROW File="c960c8a3818dad4f665ecf04eeb4acddb2" Component_="c960c8a3818dad4f665ecf04eeb4acddb2" FileName="5094C9~1|5094c960c8a3818dad4f665ecf04eeb4acddb2" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\38\5094c960c8a3818dad4f665ecf04eeb4acddb2" SelfReg="false"/>
+    <ROW File="f161059a0b1ea1691fda54210f4276172a70" Component_="f161059a0b1ea1691fda54210f4276172a70" FileName="24F161~1|24f161059a0b1ea1691fda54210f4276172a70" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\3a\24f161059a0b1ea1691fda54210f4276172a70" SelfReg="false"/>
+    <ROW File="f41d0ba0c03d0e045763cc9d4b3bcd619e6920" Component_="f161059a0b1ea1691fda54210f4276172a70" FileName="F41D0B~1|f41d0ba0c03d0e045763cc9d4b3bcd619e6920" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\3a\f41d0ba0c03d0e045763cc9d4b3bcd619e6920" SelfReg="false"/>
+    <ROW File="fad774c7aacf15678dff120f13d1f180578dd4" Component_="f161059a0b1ea1691fda54210f4276172a70" FileName="FAD774~1|fad774c7aacf15678dff120f13d1f180578dd4" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\3a\fad774c7aacf15678dff120f13d1f180578dd4" SelfReg="false"/>
+    <ROW File="c5b4da852eef1828d83d1efc68843731f282" Component_="c5b4da852eef1828d83d1efc68843731f282" FileName="01C5B4~1|01c5b4da852eef1828d83d1efc68843731f282" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\47\01c5b4da852eef1828d83d1efc68843731f282" SelfReg="false"/>
+    <ROW File="b5ada47c316316ed5f78c53aeb295f46fc1" Component_="c5b4da852eef1828d83d1efc68843731f282" FileName="918B5A~1|918b5ada47c316316ed5f78c53aeb295f46fc1" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\47\918b5ada47c316316ed5f78c53aeb295f46fc1" SelfReg="false"/>
+    <ROW File="a22806edeea38acb38962b628fbb32fb104e6" Component_="a22806edeea38acb38962b628fbb32fb104e6" FileName="7A2280~1|7a22806edeea38acb38962b628fbb32fb104e6" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\48\7a22806edeea38acb38962b628fbb32fb104e6" SelfReg="false"/>
+    <ROW File="df486d0179823d1b091342fd184151e572ba4f" Component_="a22806edeea38acb38962b628fbb32fb104e6" FileName="DF486D~1|df486d0179823d1b091342fd184151e572ba4f" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\48\df486d0179823d1b091342fd184151e572ba4f" SelfReg="false"/>
+    <ROW File="b39d67f11b20c7fbd005316f8144bfe355b535" Component_="b39d67f11b20c7fbd005316f8144bfe355b535" FileName="B39D67~1|b39d67f11b20c7fbd005316f8144bfe355b535" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\49\b39d67f11b20c7fbd005316f8144bfe355b535" SelfReg="false"/>
+    <ROW File="bbfa85fddb977db8a22fee63052c404e087516" Component_="bbfa85fddb977db8a22fee63052c404e087516" FileName="BBFA85~1|bbfa85fddb977db8a22fee63052c404e087516" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\4b\bbfa85fddb977db8a22fee63052c404e087516" SelfReg="false"/>
+    <ROW File="a506e3e132643f7c00b31aa10383115dde7fdb" Component_="a506e3e132643f7c00b31aa10383115dde7fdb" FileName="A506E3~1|a506e3e132643f7c00b31aa10383115dde7fdb" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\4f\a506e3e132643f7c00b31aa10383115dde7fdb" SelfReg="false"/>
+    <ROW File="d78244cf677030cc8ab9f23158fc433c60c96c" Component_="a506e3e132643f7c00b31aa10383115dde7fdb" FileName="D78244~1|d78244cf677030cc8ab9f23158fc433c60c96c" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\4f\d78244cf677030cc8ab9f23158fc433c60c96c" SelfReg="false"/>
+    <ROW File="f0963bd1d8c6149eb6f2dc52a5fc50c7637ad" Component_="f0963bd1d8c6149eb6f2dc52a5fc50c7637ad" FileName="4F0963~1|4f0963bd1d8c6149eb6f2dc52a5fc50c7637ad" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\52\4f0963bd1d8c6149eb6f2dc52a5fc50c7637ad" SelfReg="false"/>
+    <ROW File="fb7961771130c60df08f3dbea4890e544a" Component_="f0963bd1d8c6149eb6f2dc52a5fc50c7637ad" FileName="6592FB~1|6592fb7961771130c60df08f3dbea4890e544a" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\52\6592fb7961771130c60df08f3dbea4890e544a" SelfReg="false"/>
+    <ROW File="b058810d3cf31dbafe9e18178df185bf4" Component_="b058810d3cf31dbafe9e18178df185bf4" FileName="32723B~1|32723b058810d3cf31dbafe9e18178df185bf4" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\54\32723b058810d3cf31dbafe9e18178df185bf4" SelfReg="false"/>
+    <ROW File="d5b6095463574b7566876f95224f6e681c27bd" Component_="b058810d3cf31dbafe9e18178df185bf4" FileName="D5B609~1|d5b6095463574b7566876f95224f6e681c27bd" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\54\d5b6095463574b7566876f95224f6e681c27bd" SelfReg="false"/>
+    <ROW File="ece02efc5bf5e372e3f8735882bde77700aae1" Component_="b058810d3cf31dbafe9e18178df185bf4" FileName="ECE02E~1|ece02efc5bf5e372e3f8735882bde77700aae1" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\54\ece02efc5bf5e372e3f8735882bde77700aae1" SelfReg="false"/>
+    <ROW File="a0064eee6e0b5ce724865a334ea1a3f5cae5" Component_="a0064eee6e0b5ce724865a334ea1a3f5cae5" FileName="26A006~1|26a0064eee6e0b5ce724865a334ea1a3f5cae5" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\56\26a0064eee6e0b5ce724865a334ea1a3f5cae5" SelfReg="false"/>
+    <ROW File="fe2504542ee10dc65edced6cb8c60fb04" Component_="a0064eee6e0b5ce724865a334ea1a3f5cae5" FileName="67141F~1|67141fe2504542ee10dc65edced6cb8c60fb04" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\56\67141fe2504542ee10dc65edced6cb8c60fb04" SelfReg="false"/>
+    <ROW File="e0cf29fd59d7993192a27a4a89d608902d55ac" Component_="a0064eee6e0b5ce724865a334ea1a3f5cae5" FileName="E0CF29~1|e0cf29fd59d7993192a27a4a89d608902d55ac" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\56\e0cf29fd59d7993192a27a4a89d608902d55ac" SelfReg="false"/>
+    <ROW File="a4468b9d6584bdb4e2a266a6005635ec30e743" Component_="a4468b9d6584bdb4e2a266a6005635ec30e743" FileName="A4468B~1|a4468b9d6584bdb4e2a266a6005635ec30e743" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\5a\a4468b9d6584bdb4e2a266a6005635ec30e743" SelfReg="false"/>
+    <ROW File="d7935672ce5baf1fe7306fc46671f6cd5b4" Component_="d7935672ce5baf1fe7306fc46671f6cd5b4" FileName="083D79~1|083d7935672ce5baf1fe7306fc46671f6cd5b4" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\5f\083d7935672ce5baf1fe7306fc46671f6cd5b4" SelfReg="false"/>
+    <ROW File="e31d42c167ed776c07011f2d239a2ed7dc9931" Component_="e31d42c167ed776c07011f2d239a2ed7dc9931" FileName="E31D42~1|e31d42c167ed776c07011f2d239a2ed7dc9931" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\63\e31d42c167ed776c07011f2d239a2ed7dc9931" SelfReg="false"/>
+    <ROW File="f3d1dfaa81461fa2e770921399b3" Component_="f3d1dfaa81461fa2e770921399b3" FileName="102295~1|1022951590f3d1dfaa81461fa2e770921399b3" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\65\1022951590f3d1dfaa81461fa2e770921399b3" SelfReg="false"/>
+    <ROW File="c7d9b4535c6cd1909f968f0b2a4c58956c7b2f" Component_="f3d1dfaa81461fa2e770921399b3" FileName="C7D9B4~1|c7d9b4535c6cd1909f968f0b2a4c58956c7b2f" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\65\c7d9b4535c6cd1909f968f0b2a4c58956c7b2f" SelfReg="false"/>
+    <ROW File="a30c77cf39587a0dbb08d5029ace37f01ae02" Component_="a30c77cf39587a0dbb08d5029ace37f01ae02" FileName="2A30C7~1|2a30c77cf39587a0dbb08d5029ace37f01ae02" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\6a\2a30c77cf39587a0dbb08d5029ace37f01ae02" SelfReg="false"/>
+    <ROW File="a3ff5568a0aa1ade2bc71d8d6f7f91761a" Component_="a3ff5568a0aa1ade2bc71d8d6f7f91761a" FileName="4073A3~1|4073a3ff5568a0aa1ade2bc71d8d6f7f91761a" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\6c\4073a3ff5568a0aa1ade2bc71d8d6f7f91761a" SelfReg="false"/>
+    <ROW File="f5ea85e5bf846249d1b494f9ef7d4dc9c107d" Component_="a3ff5568a0aa1ade2bc71d8d6f7f91761a" FileName="8F5EA8~1|8f5ea85e5bf846249d1b494f9ef7d4dc9c107d" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\6c\8f5ea85e5bf846249d1b494f9ef7d4dc9c107d" SelfReg="false"/>
+    <ROW File="abaffb8ecc0216f3815ea6f69f36af2800f695" Component_="abaffb8ecc0216f3815ea6f69f36af2800f695" FileName="ABAFFB~1|abaffb8ecc0216f3815ea6f69f36af2800f695" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\6d\abaffb8ecc0216f3815ea6f69f36af2800f695" SelfReg="false"/>
+    <ROW File="ae8c4a9a359b60f93f494157249b4f8f3" Component_="ae8c4a9a359b60f93f494157249b4f8f3" FileName="55299A~1|55299ae8c4a9a359b60f93f494157249b4f8f3" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\74\55299ae8c4a9a359b60f93f494157249b4f8f3" SelfReg="false"/>
+    <ROW File="c60125c1b211d4ef9b7a957c4d03e1d30b0cf" Component_="ae8c4a9a359b60f93f494157249b4f8f3" FileName="7C6012~1|7c60125c1b211d4ef9b7a957c4d03e1d30b0cf" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\74\7c60125c1b211d4ef9b7a957c4d03e1d30b0cf" SelfReg="false"/>
+    <ROW File="b00c59ec810db959a5a702d7aee41a50d402b7" Component_="ae8c4a9a359b60f93f494157249b4f8f3" FileName="B00C59~1|b00c59ec810db959a5a702d7aee41a50d402b7" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\74\b00c59ec810db959a5a702d7aee41a50d402b7" SelfReg="false"/>
+    <ROW File="fe06c35c3ebce190b2c41390f2fd6141a54c" Component_="fe06c35c3ebce190b2c41390f2fd6141a54c" FileName="22FE06~1|22fe06c35c3ebce190b2c41390f2fd6141a54c" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\79\22fe06c35c3ebce190b2c41390f2fd6141a54c" SelfReg="false"/>
+    <ROW File="c58f4494260194caf1ce338bc310b7da767a7" Component_="fe06c35c3ebce190b2c41390f2fd6141a54c" FileName="4C58F4~1|4c58f4494260194caf1ce338bc310b7da767a7" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\79\4c58f4494260194caf1ce338bc310b7da767a7" SelfReg="false"/>
+    <ROW File="e1836f8dd7a5cfd68025959d0796ca98f65ee" Component_="fe06c35c3ebce190b2c41390f2fd6141a54c" FileName="8E1836~1|8e1836f8dd7a5cfd68025959d0796ca98f65ee" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\79\8e1836f8dd7a5cfd68025959d0796ca98f65ee" SelfReg="false"/>
+    <ROW File="b670c35c56a0f6d3d796241c04fa3c52a08" Component_="b670c35c56a0f6d3d796241c04fa3c52a08" FileName="190B67~1|190b670c35c56a0f6d3d796241c04fa3c52a08" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\7a\190b670c35c56a0f6d3d796241c04fa3c52a08" SelfReg="false"/>
+    <ROW File="a16c074275befb193c1d872c73cf562692a73" Component_="a16c074275befb193c1d872c73cf562692a73" FileName="9A16C0~1|9a16c074275befb193c1d872c73cf562692a73" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\7e\9a16c074275befb193c1d872c73cf562692a73" SelfReg="false"/>
+    <ROW File="dfb20ef0509166c8a5413a426e98ae92f6c84c" Component_="dfb20ef0509166c8a5413a426e98ae92f6c84c" FileName="DFB20E~1|dfb20ef0509166c8a5413a426e98ae92f6c84c" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\80\dfb20ef0509166c8a5413a426e98ae92f6c84c" SelfReg="false"/>
+    <ROW File="e91382f8b7d5195453003f712c8f72fba67e" Component_="e91382f8b7d5195453003f712c8f72fba67e" FileName="92E913~1|92e91382f8b7d5195453003f712c8f72fba67e" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\86\92e91382f8b7d5195453003f712c8f72fba67e" SelfReg="false"/>
+    <ROW File="ec8462beb3aafd0946bafb1cb86a7fce8680a5" Component_="ec8462beb3aafd0946bafb1cb86a7fce8680a5" FileName="EC8462~1|ec8462beb3aafd0946bafb1cb86a7fce8680a5" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\88\ec8462beb3aafd0946bafb1cb86a7fce8680a5" SelfReg="false"/>
+    <ROW File="f0cc9197480fd97bd898208dca2ec9f29ac4c" Component_="f0cc9197480fd97bd898208dca2ec9f29ac4c" FileName="4F0CC9~1|4f0cc9197480fd97bd898208dca2ec9f29ac4c" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\8c\4f0cc9197480fd97bd898208dca2ec9f29ac4c" SelfReg="false"/>
+    <ROW File="ada11edd58e55b1d968ea20fb1ccd7a" Component_="ada11edd58e55b1d968ea20fb1ccd7a" FileName="029791~1|0297915ada11edd58e55b1d968ea20fb1ccd7a" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\8f\0297915ada11edd58e55b1d968ea20fb1ccd7a" SelfReg="false"/>
+    <ROW File="c3c87fa4d9a24fca3493528b3d6b3726d46" Component_="ada11edd58e55b1d968ea20fb1ccd7a" FileName="031C3C~1|031c3c87fa4d9a24fca3493528b3d6b3726d46" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\8f\031c3c87fa4d9a24fca3493528b3d6b3726d46" SelfReg="false"/>
+    <ROW File="e7acfc5889a737a124def718ebefdfb4fb975" Component_="ada11edd58e55b1d968ea20fb1ccd7a" FileName="7E7ACF~1|7e7acfc5889a737a124def718ebefdfb4fb975" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\8f\7e7acfc5889a737a124def718ebefdfb4fb975" SelfReg="false"/>
+    <ROW File="fa0dc5ed0942cc19f93646ca4e76eb6341efc0" Component_="fa0dc5ed0942cc19f93646ca4e76eb6341efc0" FileName="FA0DC5~1|fa0dc5ed0942cc19f93646ca4e76eb6341efc0" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\90\fa0dc5ed0942cc19f93646ca4e76eb6341efc0" SelfReg="false"/>
+    <ROW File="a95c9b560f70cbd17c753ad4388b1e0c77df2b" Component_="a95c9b560f70cbd17c753ad4388b1e0c77df2b" FileName="A95C9B~1|a95c9b560f70cbd17c753ad4388b1e0c77df2b" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\92\a95c9b560f70cbd17c753ad4388b1e0c77df2b" SelfReg="false"/>
+    <ROW File="e87af79ff1ec771d97ca021900ed49411594" Component_="e87af79ff1ec771d97ca021900ed49411594" FileName="77E87A~1|77e87af79ff1ec771d97ca021900ed49411594" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\93\77e87af79ff1ec771d97ca021900ed49411594" SelfReg="false"/>
+    <ROW File="cf5030c878765c043d84e30d75e410acbabd2" Component_="cf5030c878765c043d84e30d75e410acbabd2" FileName="0CF503~1|0cf5030c878765c043d84e30d75e410acbabd2" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\94\0cf5030c878765c043d84e30d75e410acbabd2" SelfReg="false"/>
+    <ROW File="ae16e07a5fdb0e6a735c7d3b578d666778589" Component_="ae16e07a5fdb0e6a735c7d3b578d666778589" FileName="4AE16E~1|4ae16e07a5fdb0e6a735c7d3b578d666778589" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\95\4ae16e07a5fdb0e6a735c7d3b578d666778589" SelfReg="false"/>
+    <ROW File="e5053154c056544047754749dcfe9d8fb69097" Component_="e5053154c056544047754749dcfe9d8fb69097" FileName="E50531~1|e5053154c056544047754749dcfe9d8fb69097" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\96\e5053154c056544047754749dcfe9d8fb69097" SelfReg="false"/>
+    <ROW File="baa40ed3160ea2693b22358bac9d2e05ed0fb" Component_="baa40ed3160ea2693b22358bac9d2e05ed0fb" FileName="7BAA40~1|7baa40ed3160ea2693b22358bac9d2e05ed0fb" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\aa\7baa40ed3160ea2693b22358bac9d2e05ed0fb" SelfReg="false"/>
+    <ROW File="d0f0fdb5e4f2312540f35a7011df7133ac65" Component_="d0f0fdb5e4f2312540f35a7011df7133ac65" FileName="03D0F0~1|03d0f0fdb5e4f2312540f35a7011df7133ac65" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\b4\03d0f0fdb5e4f2312540f35a7011df7133ac65" SelfReg="false"/>
+    <ROW File="a71a6135bceacc6d140eeaa9d6f09e6" Component_="a71a6135bceacc6d140eeaa9d6f09e6" FileName="992793~1|9927930a71a6135bceacc6d140eeaa9d6f09e6" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\ba\9927930a71a6135bceacc6d140eeaa9d6f09e6" SelfReg="false"/>
+    <ROW File="b4ac2a6bde12948fd3b7f39b363249b16f2002" Component_="b4ac2a6bde12948fd3b7f39b363249b16f2002" FileName="B4AC2A~1|b4ac2a6bde12948fd3b7f39b363249b16f2002" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\bd\b4ac2a6bde12948fd3b7f39b363249b16f2002" SelfReg="false"/>
+    <ROW File="fa534c12b3d1ef61bb2b84d5b41ffbba6bd" Component_="fa534c12b3d1ef61bb2b84d5b41ffbba6bd" FileName="455FA5~1|455fa534c12b3d1ef61bb2b84d5b41ffbba6bd" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\c6\455fa534c12b3d1ef61bb2b84d5b41ffbba6bd" SelfReg="false"/>
+    <ROW File="d2a66cbc99fc6d67099126663d533f216b76" Component_="d2a66cbc99fc6d67099126663d533f216b76" FileName="97D2A6~1|97d2a66cbc99fc6d67099126663d533f216b76" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\c7\97d2a66cbc99fc6d67099126663d533f216b76" SelfReg="false"/>
+    <ROW File="fe9c78d6fe7c2878d0e9d6e0de95e7ba1f59" Component_="fe9c78d6fe7c2878d0e9d6e0de95e7ba1f59" FileName="62FE9C~1|62fe9c78d6fe7c2878d0e9d6e0de95e7ba1f59" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\ce\62fe9c78d6fe7c2878d0e9d6e0de95e7ba1f59" SelfReg="false"/>
+    <ROW File="a9bc11336e03ff1f1f3a835720305a223f13" Component_="a9bc11336e03ff1f1f3a835720305a223f13" FileName="17A9BC~1|17a9bc11336e03ff1f1f3a835720305a223f13" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\cf\17a9bc11336e03ff1f1f3a835720305a223f13" SelfReg="false"/>
+    <ROW File="a69a9d66a2f8919a564752a1f2bc9b5d152d57" Component_="a9bc11336e03ff1f1f3a835720305a223f13" FileName="A69A9D~1|a69a9d66a2f8919a564752a1f2bc9b5d152d57" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\cf\a69a9d66a2f8919a564752a1f2bc9b5d152d57" SelfReg="false"/>
+    <ROW File="d5e2a47f6b3c2ccf4e747e43ee34273d0417" Component_="d5e2a47f6b3c2ccf4e747e43ee34273d0417" FileName="00D5E2~1|00d5e2a47f6b3c2ccf4e747e43ee34273d0417" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\d0\00d5e2a47f6b3c2ccf4e747e43ee34273d0417" SelfReg="false"/>
+    <ROW File="fff25de086e1af76684dd9e0a52b96cce2dba7" Component_="fff25de086e1af76684dd9e0a52b96cce2dba7" FileName="FFF25D~1|fff25de086e1af76684dd9e0a52b96cce2dba7" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\d4\fff25de086e1af76684dd9e0a52b96cce2dba7" SelfReg="false"/>
+    <ROW File="e92876bb61ff1482450bb71ea6255d5b07467c" Component_="e92876bb61ff1482450bb71ea6255d5b07467c" FileName="E92876~1|e92876bb61ff1482450bb71ea6255d5b07467c" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\d6\e92876bb61ff1482450bb71ea6255d5b07467c" SelfReg="false"/>
+    <ROW File="d88bbfc39f9af15365b90b0ddd43c03c7d0626" Component_="d88bbfc39f9af15365b90b0ddd43c03c7d0626" FileName="D88BBF~1|d88bbfc39f9af15365b90b0ddd43c03c7d0626" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\d7\d88bbfc39f9af15365b90b0ddd43c03c7d0626" SelfReg="false"/>
+    <ROW File="eaa6af39cb98c5e19805fcf24f7efe278a2" Component_="eaa6af39cb98c5e19805fcf24f7efe278a2" FileName="482EAA~1|482eaa6af39cb98c5e19805fcf24f7efe278a2" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\d9\482eaa6af39cb98c5e19805fcf24f7efe278a2" SelfReg="false"/>
+    <ROW File="daa1c99e41b9cfbb3444d0e3aede2c9babff6" Component_="daa1c99e41b9cfbb3444d0e3aede2c9babff6" FileName="3DAA1C~1|3daa1c99e41b9cfbb3444d0e3aede2c9babff6" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\db\3daa1c99e41b9cfbb3444d0e3aede2c9babff6" SelfReg="false"/>
+    <ROW File="e0770424b2a19faf507a501ebfc23be8f54e7b" Component_="e0770424b2a19faf507a501ebfc23be8f54e7b" FileName="E07704~1|e0770424b2a19faf507a501ebfc23be8f54e7b" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\df\e0770424b2a19faf507a501ebfc23be8f54e7b" SelfReg="false"/>
+    <ROW File="b8e1f1ce9e9cb2eef7e617a5d13a2349737ac8" Component_="b8e1f1ce9e9cb2eef7e617a5d13a2349737ac8" FileName="B8E1F1~1|b8e1f1ce9e9cb2eef7e617a5d13a2349737ac8" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\e1\b8e1f1ce9e9cb2eef7e617a5d13a2349737ac8" SelfReg="false"/>
+    <ROW File="ec4eb7931e571d188e271e0e1a93da505" Component_="ec4eb7931e571d188e271e0e1a93da505" FileName="47643E~1|47643ec4eb7931e571d188e271e0e1a93da505" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\e5\47643ec4eb7931e571d188e271e0e1a93da505" SelfReg="false"/>
+    <ROW File="ad9521d24ffa99e729ce19d85060fa77c74df5" Component_="ad9521d24ffa99e729ce19d85060fa77c74df5" FileName="AD9521~1|ad9521d24ffa99e729ce19d85060fa77c74df5" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\e7\ad9521d24ffa99e729ce19d85060fa77c74df5" SelfReg="false"/>
+    <ROW File="a266d987034c99c2140281ba128aae49e0db6" Component_="a266d987034c99c2140281ba128aae49e0db6" FileName="0A266D~1|0a266d987034c99c2140281ba128aae49e0db6" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\e9\0a266d987034c99c2140281ba128aae49e0db6" SelfReg="false"/>
+    <ROW File="de09d04c5699a63b54fe0bd6a54774260441f" Component_="a266d987034c99c2140281ba128aae49e0db6" FileName="0DE09D~1|0de09d04c5699a63b54fe0bd6a54774260441f" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\e9\0de09d04c5699a63b54fe0bd6a54774260441f" SelfReg="false"/>
+    <ROW File="a48563116939475f7f06c91da07e729dd7e" Component_="a48563116939475f7f06c91da07e729dd7e" FileName="308A48~1|308a48563116939475f7f06c91da07e729dd7e" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\eb\308a48563116939475f7f06c91da07e729dd7e" SelfReg="false"/>
+    <ROW File="d4001b43df03364e567928218b9c0cc7b74af" Component_="d4001b43df03364e567928218b9c0cc7b74af" FileName="1D4001~1|1d4001b43df03364e567928218b9c0cc7b74af" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\ec\1d4001b43df03364e567928218b9c0cc7b74af" SelfReg="false"/>
+    <ROW File="f1ca4c57af5efc3ac684c0f154b3558f626ccb" Component_="f1ca4c57af5efc3ac684c0f154b3558f626ccb" FileName="F1CA4C~1|f1ca4c57af5efc3ac684c0f154b3558f626ccb" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\f6\f1ca4c57af5efc3ac684c0f154b3558f626ccb" SelfReg="false"/>
+    <ROW File="fd0c2256c23d6b0d6ae1d4e246b26e5605270" Component_="fd0c2256c23d6b0d6ae1d4e246b26e5605270" FileName="0FD0C2~1|0fd0c2256c23d6b0d6ae1d4e246b26e5605270" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\f8\0fd0c2256c23d6b0d6ae1d4e246b26e5605270" SelfReg="false"/>
+    <ROW File="ac9cd5b87fa817160d143d430a6f9318d46d" Component_="ac9cd5b87fa817160d143d430a6f9318d46d" FileName="86AC9C~1|86ac9cd5b87fa817160d143d430a6f9318d46d" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\fb\86ac9cd5b87fa817160d143d430a6f9318d46d" SelfReg="false"/>
+    <ROW File="c36c84b74848e6369273a2050bea659ede0" Component_="c36c84b74848e6369273a2050bea659ede0" FileName="143C36~1|143c36c84b74848e6369273a2050bea659ede0" Version="65535.65535.65535.65535" Attributes="1" SourcePath=".git\objects\ff\143c36c84b74848e6369273a2050bea659ede0" SelfReg="false"/>
+    <ROW File="ORIG_HEAD" Component_="COMMIT_EDITMSG" FileName="ORIG_H~1|ORIG_HEAD" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\ORIG_HEAD" SelfReg="false"/>
+    <ROW File="main_2" Component_="main_1" FileName="main" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\refs\heads\main" SelfReg="false"/>
+    <ROW File="HEAD_3" Component_="HEAD_2" FileName="HEAD" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\refs\remotes\origin\HEAD" SelfReg="false"/>
+    <ROW File="main_3" Component_="HEAD_2" FileName="main" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".git\refs\remotes\origin\main" SelfReg="false"/>
+    <ROW File="gitattributes" Component_="gitattributes" FileName="GITATT~1|.gitattributes" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".gitattributes" SelfReg="false"/>
+    <ROW File="gitignore" Component_="gitattributes" FileName="GITIGN~1|.gitignore" Version="65535.65535.65535.65535" Attributes="0" SourcePath=".gitignore" SelfReg="false"/>
+    <ROW File="builtjar.properties" Component_="builtjar.properties" FileName="BUILT-~1.PRO|built-jar.properties" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\built-jar.properties" SelfReg="false"/>
+    <ROW File="PanelAnggota1.class" Component_="PanelAnggota1.class" FileName="PANELA~1.CLA|PanelAnggota$1.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Anggota\PanelAnggota$1.class" SelfReg="false"/>
+    <ROW File="PanelAnggota2.class" Component_="PanelAnggota1.class" FileName="PANELA~2.CLA|PanelAnggota$2.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Anggota\PanelAnggota$2.class" SelfReg="false"/>
+    <ROW File="PanelAnggota3.class" Component_="PanelAnggota1.class" FileName="PANELA~3.CLA|PanelAnggota$3.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Anggota\PanelAnggota$3.class" SelfReg="false"/>
+    <ROW File="PanelAnggota4.class" Component_="PanelAnggota1.class" FileName="PANELA~4.CLA|PanelAnggota$4.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Anggota\PanelAnggota$4.class" SelfReg="false"/>
+    <ROW File="PanelAnggota5.class" Component_="PanelAnggota1.class" FileName="PANELA~5.CLA|PanelAnggota$5.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Anggota\PanelAnggota$5.class" SelfReg="false"/>
+    <ROW File="PanelAnggota6.class" Component_="PanelAnggota1.class" FileName="PANELA~6.CLA|PanelAnggota$6.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Anggota\PanelAnggota$6.class" SelfReg="false"/>
+    <ROW File="PanelAnggota.class" Component_="PanelAnggota1.class" FileName="PANELA~7.CLA|PanelAnggota.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Anggota\PanelAnggota.class" SelfReg="false"/>
+    <ROW File="PanelBuku1.class" Component_="PanelBuku1.class" FileName="PANELB~1.CLA|PanelBuku$1.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Buku\PanelBuku$1.class" SelfReg="false"/>
+    <ROW File="PanelBuku2.class" Component_="PanelBuku1.class" FileName="PANELB~2.CLA|PanelBuku$2.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Buku\PanelBuku$2.class" SelfReg="false"/>
+    <ROW File="PanelBuku3.class" Component_="PanelBuku1.class" FileName="PANELB~3.CLA|PanelBuku$3.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Buku\PanelBuku$3.class" SelfReg="false"/>
+    <ROW File="PanelBuku4.class" Component_="PanelBuku1.class" FileName="PANELB~4.CLA|PanelBuku$4.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Buku\PanelBuku$4.class" SelfReg="false"/>
+    <ROW File="PanelBukumodel.class" Component_="PanelBuku1.class" FileName="PANELB~5.CLA|PanelBuku$model.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Buku\PanelBuku$model.class" SelfReg="false"/>
+    <ROW File="PanelBuku.class" Component_="PanelBuku1.class" FileName="PANELB~6.CLA|PanelBuku.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Buku\PanelBuku.class" SelfReg="false"/>
+    <ROW File="DatabaseConnection.class" Component_="DatabaseConnection.class" FileName="DATABA~1.CLA|DatabaseConnection.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\DatabaseConnection.class" SelfReg="false"/>
+    <ROW File="HashUtil.class" Component_="DatabaseConnection.class" FileName="HASHUT~1.CLA|HashUtil.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\HashUtil.class" SelfReg="false"/>
+    <ROW File="MenuUtama1.class" Component_="DatabaseConnection.class" FileName="MENUUT~1.CLA|MenuUtama$1.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\MenuUtama$1.class" SelfReg="false"/>
+    <ROW File="MenuUtama2.class" Component_="DatabaseConnection.class" FileName="MENUUT~2.CLA|MenuUtama$2.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\MenuUtama$2.class" SelfReg="false"/>
+    <ROW File="MenuUtama3.class" Component_="DatabaseConnection.class" FileName="MENUUT~3.CLA|MenuUtama$3.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\MenuUtama$3.class" SelfReg="false"/>
+    <ROW File="MenuUtama4.class" Component_="DatabaseConnection.class" FileName="MENUUT~4.CLA|MenuUtama$4.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\MenuUtama$4.class" SelfReg="false"/>
+    <ROW File="MenuUtama.class" Component_="DatabaseConnection.class" FileName="MENUUT~5.CLA|MenuUtama.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\MenuUtama.class" SelfReg="false"/>
+    <ROW File="PanelLogin1.class" Component_="DatabaseConnection.class" FileName="PANELL~1.CLA|PanelLogin$1.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\PanelLogin$1.class" SelfReg="false"/>
+    <ROW File="PanelLogin2.class" Component_="DatabaseConnection.class" FileName="PANELL~2.CLA|PanelLogin$2.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\PanelLogin$2.class" SelfReg="false"/>
+    <ROW File="PanelLogin3.class" Component_="DatabaseConnection.class" FileName="PANELL~3.CLA|PanelLogin$3.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\PanelLogin$3.class" SelfReg="false"/>
+    <ROW File="PanelLogin.class" Component_="DatabaseConnection.class" FileName="PANELL~4.CLA|PanelLogin.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\PanelLogin.class" SelfReg="false"/>
+    <ROW File="Registrasi1.class" Component_="DatabaseConnection.class" FileName="REGIST~1.CLA|Registrasi$1.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\Registrasi$1.class" SelfReg="false"/>
+    <ROW File="Registrasi2.class" Component_="DatabaseConnection.class" FileName="REGIST~2.CLA|Registrasi$2.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\Registrasi$2.class" SelfReg="false"/>
+    <ROW File="Registrasi.class" Component_="DatabaseConnection.class" FileName="REGIST~3.CLA|Registrasi.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\DashboardMenuUtama\Registrasi.class" SelfReg="false"/>
+    <ROW File="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="ADD_2_~1.PNG|add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="arrow_back_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="ARROW_~1.PNG|arrow_back_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\arrow_back_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="book.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="book.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\book.png" SelfReg="false"/>
+    <ROW File="books.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="books.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\books.png" SelfReg="false"/>
+    <ROW File="delete.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="delete.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\delete.png" SelfReg="false"/>
+    <ROW File="delete_forever_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="DELETE~1.PNG|delete_forever_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\delete_forever_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="edit_square_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="EDIT_S~1.PNG|edit_square_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\edit_square_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="group1.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="GROUP(~1.PNG|group (1).png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\group (1).png" SelfReg="false"/>
+    <ROW File="library1.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="LIBRAR~1.PNG|library (1).png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\library (1).png" SelfReg="false"/>
+    <ROW File="login_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="LOGIN_~1.PNG|login_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\login_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="logout_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="LOGOUT~1.PNG|logout_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\logout_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="loupe.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="loupe.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\loupe.png" SelfReg="false"/>
+    <ROW File="more.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="more.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\more.png" SelfReg="false"/>
+    <ROW File="padlock1.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="PADLOC~1.PNG|padlock (1).png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\padlock (1).png" SelfReg="false"/>
+    <ROW File="user1.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="USER(1~1.PNG|user (1).png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\user (1).png" SelfReg="false"/>
+    <ROW File="visibility_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="VISIBI~1.PNG|visibility_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\visibility_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="walpaper.jpg" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" FileName="walpaper.jpg" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\IconGambar\walpaper.jpg" SelfReg="false"/>
+    <ROW File="PanelPeminjam1.class" Component_="PanelPeminjam1.class" FileName="PANELP~1.CLA|PanelPeminjam$1.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Peminjam\PanelPeminjam$1.class" SelfReg="false"/>
+    <ROW File="PanelPeminjam2.class" Component_="PanelPeminjam1.class" FileName="PANELP~2.CLA|PanelPeminjam$2.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Peminjam\PanelPeminjam$2.class" SelfReg="false"/>
+    <ROW File="PanelPeminjam3.class" Component_="PanelPeminjam1.class" FileName="PANELP~3.CLA|PanelPeminjam$3.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Peminjam\PanelPeminjam$3.class" SelfReg="false"/>
+    <ROW File="PanelPeminjam.class" Component_="PanelPeminjam1.class" FileName="PANELP~4.CLA|PanelPeminjam.class" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build\classes\Peminjam\PanelPeminjam.class" SelfReg="false"/>
+    <ROW File="build.xml" Component_="gitattributes" FileName="build.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="build.xml" SelfReg="false"/>
+    <ROW File="db_recapz.sql" Component_="gitattributes" FileName="DB_REC~1.SQL|db_recapz.sql" Version="65535.65535.65535.65535" Attributes="0" SourcePath="db_recapz.sql" SelfReg="false"/>
+    <ROW File="db_rekapz_perpustakaan.sql" Component_="gitattributes" FileName="DB_REK~1.SQL|db_rekapz_perpustakaan.sql" Version="65535.65535.65535.65535" Attributes="0" SourcePath="db_rekapz_perpustakaan.sql" SelfReg="false"/>
+    <ROW File="AbsoluteLayout.jar" Component_="AbsoluteLayout.jar" FileName="ABSOLU~1.JAR|AbsoluteLayout.jar" Version="65535.65535.65535.65535" Attributes="0" SourcePath="dist\lib\AbsoluteLayout.jar" SelfReg="false"/>
+    <ROW File="eclipselink.jar" Component_="AbsoluteLayout.jar" FileName="ECLIPS~1.JAR|eclipselink.jar" Version="65535.65535.65535.65535" Attributes="0" SourcePath="dist\lib\eclipselink.jar" SelfReg="false"/>
+    <ROW File="javax.persistence_2.1.0.v201304241213.jar" Component_="AbsoluteLayout.jar" FileName="JAVAXP~1.JAR|javax.persistence_2.1.0.v201304241213.jar" Version="65535.65535.65535.65535" Attributes="0" SourcePath="dist\lib\javax.persistence_2.1.0.v201304241213.jar" SelfReg="false"/>
+    <ROW File="mysqlconnectorj9.3.0.jar" Component_="AbsoluteLayout.jar" FileName="MYSQL-~1.JAR|mysql-connector-j-9.3.0.jar" Version="65535.65535.65535.65535" Attributes="0" SourcePath="dist\lib\mysql-connector-j-9.3.0.jar" SelfReg="false"/>
+    <ROW File="org.eclipse.persistence.jpa.jpql_2.5.1.v20130918f2b9fc5.jar" Component_="AbsoluteLayout.jar" FileName="ORGECL~1.JAR|org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar" Version="65535.65535.65535.65535" Attributes="0" SourcePath="dist\lib\org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar" SelfReg="false"/>
+    <ROW File="README.TXT" Component_="README.TXT" FileName="README.TXT" Version="65535.65535.65535.65535" Attributes="0" SourcePath="dist\README.TXT" SelfReg="false"/>
+    <ROW File="RECAPZ.jar" Component_="README.TXT" FileName="RECAPZ.jar" Version="65535.65535.65535.65535" Attributes="0" SourcePath="dist\RECAPZ.jar" SelfReg="false"/>
+    <ROW File="manifest.mf" Component_="gitattributes" FileName="manifest.mf" Version="65535.65535.65535.65535" Attributes="0" SourcePath="manifest.mf" SelfReg="false"/>
+    <ROW File="buildimpl.xml" Component_="buildimpl.xml" FileName="BUILD-~1.XML|build-impl.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="nbproject\build-impl.xml" SelfReg="false"/>
+    <ROW File="genfiles.properties" Component_="buildimpl.xml" FileName="GENFIL~1.PRO|genfiles.properties" Version="65535.65535.65535.65535" Attributes="0" SourcePath="nbproject\genfiles.properties" SelfReg="false"/>
+    <ROW File="private.properties" Component_="private.properties" FileName="PRIVAT~1.PRO|private.properties" Version="65535.65535.65535.65535" Attributes="0" SourcePath="nbproject\private\private.properties" SelfReg="false"/>
+    <ROW File="private.xml" Component_="private.properties" FileName="private.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="nbproject\private\private.xml" SelfReg="false"/>
+    <ROW File="project.properties" Component_="buildimpl.xml" FileName="PROJEC~1.PRO|project.properties" Version="65535.65535.65535.65535" Attributes="0" SourcePath="nbproject\project.properties" SelfReg="false"/>
+    <ROW File="project.xml" Component_="buildimpl.xml" FileName="project.xml" Version="65535.65535.65535.65535" Attributes="0" SourcePath="nbproject\project.xml" SelfReg="false"/>
+    <ROW File="PanelAnggota.form" Component_="PanelAnggota.form" FileName="PANELA~1.FOR|PanelAnggota.form" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\Anggota\PanelAnggota.form" SelfReg="false"/>
+    <ROW File="PanelAnggota.java" Component_="PanelAnggota.form" FileName="PANELA~1.JAV|PanelAnggota.java" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\Anggota\PanelAnggota.java" SelfReg="false"/>
+    <ROW File="PanelBuku.form" Component_="PanelBuku.form" FileName="PANELB~1.FOR|PanelBuku.form" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\Buku\PanelBuku.form" SelfReg="false"/>
+    <ROW File="PanelBuku.java" Component_="PanelBuku.form" FileName="PANELB~1.JAV|PanelBuku.java" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\Buku\PanelBuku.java" SelfReg="false"/>
+    <ROW File="DatabaseConnection.java" Component_="DatabaseConnection.java" FileName="DATABA~1.JAV|DatabaseConnection.java" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\DashboardMenuUtama\DatabaseConnection.java" SelfReg="false"/>
+    <ROW File="HashUtil.java" Component_="DatabaseConnection.java" FileName="HASHUT~1.JAV|HashUtil.java" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\DashboardMenuUtama\HashUtil.java" SelfReg="false"/>
+    <ROW File="MenuUtama.form" Component_="DatabaseConnection.java" FileName="MENUUT~1.FOR|MenuUtama.form" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\DashboardMenuUtama\MenuUtama.form" SelfReg="false"/>
+    <ROW File="MenuUtama.java" Component_="DatabaseConnection.java" FileName="MENUUT~1.JAV|MenuUtama.java" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\DashboardMenuUtama\MenuUtama.java" SelfReg="false"/>
+    <ROW File="PanelLogin.form" Component_="DatabaseConnection.java" FileName="PANELL~1.FOR|PanelLogin.form" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\DashboardMenuUtama\PanelLogin.form" SelfReg="false"/>
+    <ROW File="PanelLogin.java" Component_="DatabaseConnection.java" FileName="PANELL~1.JAV|PanelLogin.java" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\DashboardMenuUtama\PanelLogin.java" SelfReg="false"/>
+    <ROW File="Registrasi.form" Component_="DatabaseConnection.java" FileName="REGIST~1.FOR|Registrasi.form" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\DashboardMenuUtama\Registrasi.form" SelfReg="false"/>
+    <ROW File="Registrasi.java" Component_="DatabaseConnection.java" FileName="REGIST~1.JAV|Registrasi.java" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\DashboardMenuUtama\Registrasi.java" SelfReg="false"/>
+    <ROW File="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="ADD_2_~1.PNG|add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="arrow_back_20dp_1F1F1F_FILL0_wght4_1_00_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="ARROW_~1.PNG|arrow_back_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\arrow_back_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="book.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="book.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\book.png" SelfReg="false"/>
+    <ROW File="books.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="books.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\books.png" SelfReg="false"/>
+    <ROW File="delete.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="delete.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\delete.png" SelfReg="false"/>
+    <ROW File="delete_forever_20dp_FFFFFF_FILL0_w_1_ght400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="DELETE~1.PNG|delete_forever_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\delete_forever_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="edit_square_20dp_FFFFFF_FILL0_wght_1_400_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="EDIT_S~1.PNG|edit_square_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\edit_square_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="group1.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="GROUP(~1.PNG|group (1).png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\group (1).png" SelfReg="false"/>
+    <ROW File="library1.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="LIBRAR~1.PNG|library (1).png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\library (1).png" SelfReg="false"/>
+    <ROW File="login_20dp_1F1F1F_FILL0_wght400_GR_1_AD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="LOGIN_~1.PNG|login_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\login_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="logout_20dp_1F1F1F_FILL0_wght400_G_1_RAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="LOGOUT~1.PNG|logout_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\logout_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="loupe.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="loupe.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\loupe.png" SelfReg="false"/>
+    <ROW File="more.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="more.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\more.png" SelfReg="false"/>
+    <ROW File="padlock1.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="PADLOC~1.PNG|padlock (1).png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\padlock (1).png" SelfReg="false"/>
+    <ROW File="user1.png_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="USER(1~1.PNG|user (1).png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\user (1).png" SelfReg="false"/>
+    <ROW File="visibility_20dp_FFFFFF_FILL0_wght4_1_00_GRAD0_opsz20.png" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="VISIBI~1.PNG|visibility_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\visibility_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" SelfReg="false"/>
+    <ROW File="walpaper.jpg_1" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png" FileName="walpaper.jpg" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\IconGambar\walpaper.jpg" SelfReg="false"/>
+    <ROW File="PanelPeminjam.form" Component_="PanelPeminjam.form" FileName="PANELP~1.FOR|PanelPeminjam.form" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\Peminjam\PanelPeminjam.form" SelfReg="false"/>
+    <ROW File="PanelPeminjam.java" Component_="PanelPeminjam.form" FileName="PANELP~1.JAV|PanelPeminjam.java" Version="65535.65535.65535.65535" Attributes="0" SourcePath="src\Peminjam\PanelPeminjam.java" SelfReg="false"/>
+    <ROW File="RECAPZPerpustakaan.exe" Component_="RECAPZPerpustakaan.exe" FileName="RECAPZ~1.EXE|RECAPZ Perpustakaan.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="&lt;AI_STUBS_64&gt;aijclw.exe" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="id" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_id.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="COMMIT_EDITMSG"/>
+    <ROW Feature_="MainFeature" Component_="applypatchmsg.sample"/>
+    <ROW Feature_="MainFeature" Component_="exclude"/>
+    <ROW Feature_="MainFeature" Component_="HEAD"/>
+    <ROW Feature_="MainFeature" Component_="main"/>
+    <ROW Feature_="MainFeature" Component_="HEAD_1"/>
+    <ROW Feature_="MainFeature" Component_="e39ede1d218db9952763555503e485e3195805"/>
+    <ROW Feature_="MainFeature" Component_="bee4150b087cb01ef142bf02553729b0d1def"/>
+    <ROW Feature_="MainFeature" Component_="feea8c044646c961239f3dd481d2e2666b488"/>
+    <ROW Feature_="MainFeature" Component_="e2e1c6b1958c35d39688988e7b6732f14963a"/>
+    <ROW Feature_="MainFeature" Component_="fd8ce7a56aacdd0ec8ddbb7862f9ce6f3b8"/>
+    <ROW Feature_="MainFeature" Component_="ed6ce7dcae3d6efedbf7d1063daca5ed8f742"/>
+    <ROW Feature_="MainFeature" Component_="ec8316e7b3ba74e5f0a56ce761246096731339"/>
+    <ROW Feature_="MainFeature" Component_="b35f88423815b4a3c43c619e659b50147e7965"/>
+    <ROW Feature_="MainFeature" Component_="ab308464056892139f1f72c18524f4e351e35"/>
+    <ROW Feature_="MainFeature" Component_="d7d7aefacd3519a82a8bfc7e19fd6c2e76"/>
+    <ROW Feature_="MainFeature" Component_="b8e8469f8289087225df5e4eab244cfcb0df20"/>
+    <ROW Feature_="MainFeature" Component_="dcb0bd3574e1adf35102c0d0e254ac11"/>
+    <ROW Feature_="MainFeature" Component_="bc980dbb8b7a507eb180a6a8b04a135374346"/>
+    <ROW Feature_="MainFeature" Component_="be8a7ba6e9d5ec0131f0a42f5f4b96ca39de23"/>
+    <ROW Feature_="MainFeature" Component_="feb9de063fd991235b6bacab5344e96f8408"/>
+    <ROW Feature_="MainFeature" Component_="e8e5bc3b7f1f7bad2bc0751a933e00c801983"/>
+    <ROW Feature_="MainFeature" Component_="fede28c9b8249b7d72af5a8af9810ec9c31ce8"/>
+    <ROW Feature_="MainFeature" Component_="c960c8a3818dad4f665ecf04eeb4acddb2"/>
+    <ROW Feature_="MainFeature" Component_="f161059a0b1ea1691fda54210f4276172a70"/>
+    <ROW Feature_="MainFeature" Component_="c5b4da852eef1828d83d1efc68843731f282"/>
+    <ROW Feature_="MainFeature" Component_="a22806edeea38acb38962b628fbb32fb104e6"/>
+    <ROW Feature_="MainFeature" Component_="b39d67f11b20c7fbd005316f8144bfe355b535"/>
+    <ROW Feature_="MainFeature" Component_="bbfa85fddb977db8a22fee63052c404e087516"/>
+    <ROW Feature_="MainFeature" Component_="a506e3e132643f7c00b31aa10383115dde7fdb"/>
+    <ROW Feature_="MainFeature" Component_="f0963bd1d8c6149eb6f2dc52a5fc50c7637ad"/>
+    <ROW Feature_="MainFeature" Component_="b058810d3cf31dbafe9e18178df185bf4"/>
+    <ROW Feature_="MainFeature" Component_="a0064eee6e0b5ce724865a334ea1a3f5cae5"/>
+    <ROW Feature_="MainFeature" Component_="a4468b9d6584bdb4e2a266a6005635ec30e743"/>
+    <ROW Feature_="MainFeature" Component_="d7935672ce5baf1fe7306fc46671f6cd5b4"/>
+    <ROW Feature_="MainFeature" Component_="e31d42c167ed776c07011f2d239a2ed7dc9931"/>
+    <ROW Feature_="MainFeature" Component_="f3d1dfaa81461fa2e770921399b3"/>
+    <ROW Feature_="MainFeature" Component_="a30c77cf39587a0dbb08d5029ace37f01ae02"/>
+    <ROW Feature_="MainFeature" Component_="a3ff5568a0aa1ade2bc71d8d6f7f91761a"/>
+    <ROW Feature_="MainFeature" Component_="abaffb8ecc0216f3815ea6f69f36af2800f695"/>
+    <ROW Feature_="MainFeature" Component_="ae8c4a9a359b60f93f494157249b4f8f3"/>
+    <ROW Feature_="MainFeature" Component_="fe06c35c3ebce190b2c41390f2fd6141a54c"/>
+    <ROW Feature_="MainFeature" Component_="b670c35c56a0f6d3d796241c04fa3c52a08"/>
+    <ROW Feature_="MainFeature" Component_="a16c074275befb193c1d872c73cf562692a73"/>
+    <ROW Feature_="MainFeature" Component_="dfb20ef0509166c8a5413a426e98ae92f6c84c"/>
+    <ROW Feature_="MainFeature" Component_="e91382f8b7d5195453003f712c8f72fba67e"/>
+    <ROW Feature_="MainFeature" Component_="ec8462beb3aafd0946bafb1cb86a7fce8680a5"/>
+    <ROW Feature_="MainFeature" Component_="f0cc9197480fd97bd898208dca2ec9f29ac4c"/>
+    <ROW Feature_="MainFeature" Component_="ada11edd58e55b1d968ea20fb1ccd7a"/>
+    <ROW Feature_="MainFeature" Component_="fa0dc5ed0942cc19f93646ca4e76eb6341efc0"/>
+    <ROW Feature_="MainFeature" Component_="a95c9b560f70cbd17c753ad4388b1e0c77df2b"/>
+    <ROW Feature_="MainFeature" Component_="e87af79ff1ec771d97ca021900ed49411594"/>
+    <ROW Feature_="MainFeature" Component_="cf5030c878765c043d84e30d75e410acbabd2"/>
+    <ROW Feature_="MainFeature" Component_="ae16e07a5fdb0e6a735c7d3b578d666778589"/>
+    <ROW Feature_="MainFeature" Component_="e5053154c056544047754749dcfe9d8fb69097"/>
+    <ROW Feature_="MainFeature" Component_="baa40ed3160ea2693b22358bac9d2e05ed0fb"/>
+    <ROW Feature_="MainFeature" Component_="d0f0fdb5e4f2312540f35a7011df7133ac65"/>
+    <ROW Feature_="MainFeature" Component_="a71a6135bceacc6d140eeaa9d6f09e6"/>
+    <ROW Feature_="MainFeature" Component_="b4ac2a6bde12948fd3b7f39b363249b16f2002"/>
+    <ROW Feature_="MainFeature" Component_="fa534c12b3d1ef61bb2b84d5b41ffbba6bd"/>
+    <ROW Feature_="MainFeature" Component_="d2a66cbc99fc6d67099126663d533f216b76"/>
+    <ROW Feature_="MainFeature" Component_="fe9c78d6fe7c2878d0e9d6e0de95e7ba1f59"/>
+    <ROW Feature_="MainFeature" Component_="a9bc11336e03ff1f1f3a835720305a223f13"/>
+    <ROW Feature_="MainFeature" Component_="d5e2a47f6b3c2ccf4e747e43ee34273d0417"/>
+    <ROW Feature_="MainFeature" Component_="fff25de086e1af76684dd9e0a52b96cce2dba7"/>
+    <ROW Feature_="MainFeature" Component_="e92876bb61ff1482450bb71ea6255d5b07467c"/>
+    <ROW Feature_="MainFeature" Component_="d88bbfc39f9af15365b90b0ddd43c03c7d0626"/>
+    <ROW Feature_="MainFeature" Component_="eaa6af39cb98c5e19805fcf24f7efe278a2"/>
+    <ROW Feature_="MainFeature" Component_="daa1c99e41b9cfbb3444d0e3aede2c9babff6"/>
+    <ROW Feature_="MainFeature" Component_="e0770424b2a19faf507a501ebfc23be8f54e7b"/>
+    <ROW Feature_="MainFeature" Component_="b8e1f1ce9e9cb2eef7e617a5d13a2349737ac8"/>
+    <ROW Feature_="MainFeature" Component_="ec4eb7931e571d188e271e0e1a93da505"/>
+    <ROW Feature_="MainFeature" Component_="ad9521d24ffa99e729ce19d85060fa77c74df5"/>
+    <ROW Feature_="MainFeature" Component_="a266d987034c99c2140281ba128aae49e0db6"/>
+    <ROW Feature_="MainFeature" Component_="a48563116939475f7f06c91da07e729dd7e"/>
+    <ROW Feature_="MainFeature" Component_="d4001b43df03364e567928218b9c0cc7b74af"/>
+    <ROW Feature_="MainFeature" Component_="f1ca4c57af5efc3ac684c0f154b3558f626ccb"/>
+    <ROW Feature_="MainFeature" Component_="fd0c2256c23d6b0d6ae1d4e246b26e5605270"/>
+    <ROW Feature_="MainFeature" Component_="ac9cd5b87fa817160d143d430a6f9318d46d"/>
+    <ROW Feature_="MainFeature" Component_="c36c84b74848e6369273a2050bea659ede0"/>
+    <ROW Feature_="MainFeature" Component_="main_1"/>
+    <ROW Feature_="MainFeature" Component_="HEAD_2"/>
+    <ROW Feature_="MainFeature" Component_="gitattributes"/>
+    <ROW Feature_="MainFeature" Component_="builtjar.properties"/>
+    <ROW Feature_="MainFeature" Component_="PanelAnggota1.class"/>
+    <ROW Feature_="MainFeature" Component_="PanelBuku1.class"/>
+    <ROW Feature_="MainFeature" Component_="DatabaseConnection.class"/>
+    <ROW Feature_="MainFeature" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png"/>
+    <ROW Feature_="MainFeature" Component_="PanelPeminjam1.class"/>
+    <ROW Feature_="MainFeature" Component_="AbsoluteLayout.jar"/>
+    <ROW Feature_="MainFeature" Component_="README.TXT"/>
+    <ROW Feature_="MainFeature" Component_="buildimpl.xml"/>
+    <ROW Feature_="MainFeature" Component_="private.properties"/>
+    <ROW Feature_="MainFeature" Component_="PanelAnggota.form"/>
+    <ROW Feature_="MainFeature" Component_="PanelBuku.form"/>
+    <ROW Feature_="MainFeature" Component_="DatabaseConnection.java"/>
+    <ROW Feature_="MainFeature" Component_="add_2_20dp_FFFFFF_FILL0_wght400_GR_1_AD0_opsz20.png"/>
+    <ROW Feature_="MainFeature" Component_="PanelPeminjam.form"/>
+    <ROW Feature_="MainFeature" Component_="RECAPZPerpustakaan.exe"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
+    <ROW IniFile="ApplicationType" FileName="RECAPZ~2.INI|RECAPZ Perpustakaan.ini" DirProperty="APPDIR" Section="Application" Key="Application Type" Value="gui" Action="0" Component_="RECAPZPerpustakaan.exe"/>
+    <ROW IniFile="ClassPath" FileName="RECAPZ~2.INI|RECAPZ Perpustakaan.ini" DirProperty="APPDIR" Section="Class Path" Key="Class Path" Value="[Recapzv2_Dir];[#mysqlconnectorj9.3.0.jar];" Action="0" Component_="RECAPZPerpustakaan.exe"/>
+    <ROW IniFile="EmbeddedJar" FileName="RECAPZ~2.INI|RECAPZ Perpustakaan.ini" DirProperty="APPDIR" Section="Application" Key="Embedded Jar" Value="yes" Action="0" Component_="RECAPZPerpustakaan.exe"/>
+    <ROW IniFile="FailureCheck" FileName="RECAPZ~2.INI|RECAPZ Perpustakaan.ini" DirProperty="APPDIR" Section="Application" Key="Failure Check" Value="yes" Action="0" Component_="RECAPZPerpustakaan.exe"/>
+    <ROW IniFile="MainClass" FileName="RECAPZ~2.INI|RECAPZ Perpustakaan.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Main Class" Value="DashboardMenuUtama.PanelLogin" Action="0" Component_="RECAPZPerpustakaan.exe"/>
+    <ROW IniFile="MaximumVersion" FileName="RECAPZ~2.INI|RECAPZ Perpustakaan.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Maximum Version" Value="any" Action="0" Component_="RECAPZPerpustakaan.exe"/>
+    <ROW IniFile="MinimumVersion" FileName="RECAPZ~2.INI|RECAPZ Perpustakaan.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Minimum Version" Value="any" Action="0" Component_="RECAPZPerpustakaan.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiJavaComponent">
+    <ROW Name="RECAPZ Perpustakaan.exe" Launcher="RECAPZPerpustakaan.exe" MainClass="MainClass" ClassPath="ClassPath" JREMin="MinimumVersion" JREMax="MaximumVersion" IconPath="..\..\..\Users\SITI NURLENY\Downloads\logo-recapz.ico" AppType="ApplicationType" PlusList="APPDIR;" MinusList="#RECAPZPerpustakaan.exe;" MacDescription="[|CurrentJavaProductName] [|ProductVersion] © [|Manufacturer], Inc, 2025" MacBundleId="com.[|Manufacturer].[|ProductName].[|CurrentJavaProductName]" FailureCheck="FailureCheck" UACExecutionLevel="2" Platform64="true" EmbJarPath="dist\RECAPZ.jar" HasEmbJar="EmbeddedJar"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] tidak dapat diinstal di [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] tidak dapat diinstal di [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] tidak dapat diinstal di [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 600)" Description="[ProductName] tidak dapat diinstal di [WindowsTypeNT60Display]." DescriptionLocId="AI.LaunchCondition.NoNT60" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] tidak dapat diinstal di [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="RECAPZPerpustakaan" Directory_="SHORTCUTDIR" Name="RECAPZ~1|RECAPZ Perpustakaan" Component_="RECAPZPerpustakaan.exe" Target="[#RECAPZPerpustakaan.exe]" Description="[|CurrentJavaProductName] [|ProductVersion] © [|Manufacturer], Inc, 2025" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
